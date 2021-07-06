@@ -1,0 +1,211 @@
+{include file="common/header"/}
+<link rel="stylesheet" href="/static/go/version1/css/1.css" media="all" />
+<div><span><h1 onclick="titlePath('gos.json.code-snippets')">TGO</h1></span></div>
+<h1 onclick="showNone('display-1')">调试</h1>
+<div class='display-1'>
+    <p>!~------快捷<span>打印</span></p>
+    <p>!~------快捷<span><span class='color'>ln</span>打印</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>f</span>打印</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>sf</span>拼接并返回不打印</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>%</span>占位符打印</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>T</span>打印类型</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>TypeOf</span>返回类型</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>V</span>打印值</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>%p</span>打印内存地址</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>continue</span>跳出本次循环</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>break</span>跳出循环</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>print</span>打印^</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>println</span>打印^</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>time</span>暂停一秒执行代码</span>
+    </p>
+    <p>!~------快捷<span><span class='color'>time</span>程序执行时间</span>
+    </p>
+</div>
+<h1 onclick="showNone('display-3')">语法</h1>
+<div class='display-3'>
+    <p>:~------快捷<span><span class='color'>GO</span>数据类型</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>GO</span>变量 声明 赋值 简写 规范</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>GO</span>变量作用域+</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>GO</span>全局变量 局部变量+</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>GO</span>全局常量 局部常量</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>GO</span>传值 拷贝传值+</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>GO</span>运算符 运算符优先级</span>
+    </p>
+</div>
+
+<h1 onclick="showNone('display-7')">数据类型</h1>
+<div class='display-7'>
+    <p>:~type------快捷<span><span class='color'>type</span>整型</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>超大整型</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>指针类型</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>指针的指针^</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>浮点型</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>数组+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>数组 切片+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>数组 嵌套+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>切片 创建切片+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>切片 自动扩容+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>切片 索引切片+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>切片 嵌套+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>map 声明+赋值+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>map 长度和容量</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>map 嵌套+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>map 赋值^</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>结构体 定义并初始化+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>结构体 指针+</span>
+    </p>
+    <p>:~type------快捷<span><span class='color'>type</span>结构体赋值 结构体指针赋值+</span>
+    </p>
+</div>
+<h1 onclick="showNone('display-4')">函数</h1>
+<div class='display-4'>
+    <p>*~------快捷<span><span class='color'>Scan</span>用户输入</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>Scanln</span>用户输入(推荐)</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>Stdin</span>读取用户输入包括空格后内容</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>SetString</span>存储超大整型</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>utf8</span>计算字符串长度任意字符为1</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>strings</span>查找字符串中是否存在'老子'</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>Trim</span>去两边空格</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>Replace</span>字符串替换</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>Split</span>字符串分割成数组</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>builder</span>效率最高的字符串拼接</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>len</span>获取长度</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>cap</span>获取容量</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>append</span>切片入栈追加</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>unsafe</span>获取指针下一个元素的值+</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>json</span>json序列化数据+</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>json</span>json反序列化数据</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>append</span>切片删除元素^</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>*&</span>赋值通过指针同步修改</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>append</span>切片指定位置插入元素^</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>Scanf</span>用户输入^</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>iota</span>计算器^</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>reflect</span>获取结构体字段名和标签^</span>
+    </p>
+    <p>*~------快捷<span><span class='color'>cpu</span>获取当前计算机cpu个数^</span>
+    </p>
+</div>
+
+<h1 onclick="showNone('display-5')">判断</h1>
+<div class='display-5'>
+    <p>~if------快捷<span><span class='color'>if</span></span>
+    </p>
+    <p>~else if------快捷<span><span class='color'>else if</span></span>
+    </p>
+    <p>~switch------快捷<span><span class='color'>switch</span></span>
+    </p>
+    <p>~goto------快捷<span><span class='color'>goto</span></span>
+    </p>
+
+</div>
+<h1 onclick="showNone('display-6')">循环</h1>
+<div class='display-6'>
+    <p>~for------快捷<span><span class='color'>for</span>循环 打标签循环</span>
+    </p>
+    <p>~for range------快捷<span><span class='color'>for range</span>循环</span>
+    </p>
+    <p>~for range------快捷<span><span class='color'>for arr1</span>一维数组循环</span>
+    </p>
+    <p>~for range------快捷<span><span class='color'>for arr2</span>二维数组循环</span>
+    </p>
+</div>
+
+<h1 onclick="showNone('display-9')">func</h1>
+<div class='display-9'>
+    <p>:~------快捷<span><span class='color'>func</span>函数做参数</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>return函数</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>...变长参数</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>多个返回值^</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>匿名函数</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>闭包^</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>淫迟执行</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>自动执行函数^</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>方法继承+</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>空接口传参任意类型+</span>
+    </p>
+    <p>:~------快捷<span><span class='color'>func</span>非空接口约束func</span>
+    </p>
+</div>
+
+
+<h1 onclick="showNone('display-8')">块函数</h1>
+<div class='display-8'>
+    <p>~------快捷<span class="hover" id="file1"><span class='color'>file</span>文件函数</span>
+    </p>
+    <p>~------快捷<span class="hover" id="time1"><span class='color'>time</span>时间函数^</span>
+    </p>
+    <p>~------快捷<span class="hover" id="str1"><span class='color'>str</span>字符串函数</span>
+    </p>
+    <p>~------快捷<span class="hover" id="join1"><span class='color'>join</span>字符串拼接</span>
+    </p>
+    <p>~------快捷<span class='hover' id="math1"><span class='color'>math</span>数字运算</span>
+    </p>
+    <p>~------快捷<span class='hover' id="type1"><span class='color'>type</span>类型转换</span>
+    </p>
+</div>
+<script src="/static/go/version1/js/1.js"></script>

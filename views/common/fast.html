@@ -1,0 +1,32 @@
+{:widgets('bjRight')}
+<style>
+    .password {
+        height: 24px;
+        padding-top: 3px;
+    }
+    
+    .shit {
+        height: 24px;
+        margin-top: 2.5px;
+    }
+</style>
+<span style="display:none;" class="right bij shuji"><span style="margin-top: 30px;"><img  src="/static/images/书籍.png" width="32px"></span></span>
+<span style="display:none;" class="right" onclick="sjgd()"><span style="margin-top: 30px;"><img  src="/static/images/notes/更多.png" width="32px"></span></span>
+<script>
+    function fast(path) {
+
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shadeClose: true,
+            area: ['100%', '80%'],
+            skin: 'yourclass',
+            content: '<iframe src="' + path + '" width="100%" height="100%" frameborder="no" border="0"></iframe>'
+        });
+    }
+
+    function sjgd() {
+        $('.ycRight').attr('style', 'display: show')
+    }
+</script>

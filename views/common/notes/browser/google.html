@@ -1,0 +1,47 @@
+<h4 class="center" style="color: #CD70D6;background-color:#020202">
+    GO</h4>
+<style>
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 50%;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+    
+    .box1 {
+        width: 100% !important;
+    }
+</style>
+<div class="box">
+
+</div>
+
+<div class="box">
+    <div class="box1">
+        <p title="">设置不缓存图片和css
+            <span class="ss">
+			<br>{php} echo str_repeat("&nbsp;", 10); {/php}F12勾选不缓存<span style="position:relative;top:3.5px; "><img onclick="fyImg('/static/images/bj_img/browser/gg1.png')" style="vertical-align:top;" src="/static/images/tp.png" width="22px" height="17px;" /></span>
+        </p>
+        <p>设置默认打开网址
+            <span class="ss">
+                <br>{php} echo str_repeat("&nbsp;", 10); {/php}三个点->设置->启动时->打开特定网页或一组网页->添加新网页
+        </p>
+    </div>
+</div>
+
+<script>
+    function fyImg(src) {
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shadeClose: true,
+            content: '<img src=' + src + '  style="overflow-x: hidden;overflow-y: hidden;"/>'
+        });
+    }
+</script>

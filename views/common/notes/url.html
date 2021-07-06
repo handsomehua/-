@@ -1,0 +1,43 @@
+{include file="common/header"/} {include file="common/notes/header"/}
+<style>
+    body {
+        background-color: #020202
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .box {
+        counter-reset: count;
+    }
+    
+    p {
+        background: #181A1F;
+        color: #CD70D6;
+    }
+    
+    p:nth-child(odd) {
+        color: #CD70D6;
+        background: #020202;
+    }
+    
+    .ss {
+        color: #97C279;
+    }
+</style>
+
+<body>
+    <div style="float: left;">
+        <!-- <span type='button' style='color: #fff;font-size:24px;background-color: #020202;'>window10</span><br> -->
+
+        <!-- <span type='button' onclick='displauy("hot2")'><img class='img' style="background-color: #020202" src="/static/images/bj/php (1).png" width="33px"></span>
+        <span type='button' onclick='displauy("hot3")'><img class='img' style="background-color: #020202" src="/static/images/bj/vscode.png" width="33px" height="33px"></span> -->
+
+    </div>
+    <div id='hot1' class="hot" style='display:show;'>
+        {include file="common/notes/url/url"/}
+    </div>
+</body>

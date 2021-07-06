@@ -1,0 +1,86 @@
+<style>
+    body {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 100%;
+    }
+    
+    .row div {
+        color: #fff;
+        /* text-align: center; */
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .container-fluid {
+        counter-reset: count;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row justify-content-around">
+        <div class="col-md-1.7">
+            <h3>window10</h3>
+            <p><a class="ss" href="https://jingyan.baidu.com/article/d7130635eb1e8713fdf47588.html" target='_blank'>小图标显示任务栏</a></p>
+            <p><a class="ss" href="http://xinzhi.wenda.so.com/a/1538020301202529" target='_blank'>win10设置默认浏览器</a></p>
+        </div>
+    </div>
+</div>
+<script>
+    function imgTk(id) {
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['auto'],
+            skin: 'layui-layer-nobg',
+            shadeClose: true,
+            content: $('#' + id)
+        });
+    }
+</script>
+
+<!-- <style>
+    .box {
+        
+
+    }
+    
+    .box1 {
+        width: 20%;
+        border-bottom: 1px solid #C078DD;
+    }
+    
+    p {}
+</style>
+
+<div class="box">
+    <div class="box1">
+        <p><a class="ss" href="https://jingyan.baidu.com/article/d7130635eb1e8713fdf47588.html" target='_blank'>小图标显示任务栏</a></p>
+    </div>
+    <div class="box1">
+        <a class="ss" href="http://xinzhi.wenda.so.com/a/1538020301202529" target='_blank'>win10设置默认浏览器</a>
+    </div>
+    <div class="box1">
+
+         <a class="ss" href="https://bsupport.huawei.com/tools/driver-list/" target='_blank'>win10设置默认浏览器</a>
+    </div>
+    <div class="box1">
+    </div>
+    <div class="box1">
+    </div>
+</div> -->

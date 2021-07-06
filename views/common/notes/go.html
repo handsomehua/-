@@ -1,0 +1,37 @@
+{include file="common/header"/} {include file="common/notes/header"/}
+<style>
+    body {
+        background-color: #020202
+    }
+    
+    p {
+        background: #181A1F;
+        color: #CD70D6;
+    }
+    
+    p:nth-child(odd) {
+        color: #CD70D6;
+        background: #020202;
+    }
+    
+    .ss {
+        color: #97C279;
+    }
+</style>
+
+<body>
+    <div style="float: right;">
+        <span type='button' onclick='displauy("hot1")'><img style="background-color: #020202" src="/static/images/wwwgo.png" width="33px"></span>
+        <span type='button' onclick='displauy("hot2")'><img style="background-color: #020202" src="/static/images/notes/Golang Color.png" width="30px"></span>
+        <span type='button' onclick='displauy("hot3")'><img style="background-color: #020202" src="/static/images/notes/编辑.png" width="30px"></span>
+    </div>
+    <div id='hot1' class="hot" style='display:show;'>
+        {include file="common/notes/go/go"/}
+    </div>
+    <div id='hot2' class="hot" style='display:none;'>
+        {include file="common/notes/go/guess"/}
+    </div>
+    <div id='hot3' class="hot" style='display:none;'>
+        {include file="common/notes/go/Copywriting"/}
+    </div>
+</body>

@@ -1,0 +1,101 @@
+<script src="/static/tools/clipboard.js-master/dist/clipboard.min.js"></script>
+<h4 class="center" style="color: #CD70D6;background-color:#020202">
+    go试题</h4>
+<style>
+    body {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 100%;
+    }
+    
+    .row div {
+        color: #fff;
+        /* text-align: center; */
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .container-fluid {
+        counter-reset: count;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+</style>
+{include file="/common/notes/go/copy"/}
+
+<div class="container-fluid">
+    <div class="row justify-content-around">
+        <div class="col-md-1.7">
+            <h3>切片坑<button style="color:#fff" class="btn" data-clipboard-target="#foo">Copy</button></h3>
+            <p>切片删除元素</p>
+            <p>看代码写结果*9</p>
+        </div>
+        <div class="col-md-1.7">
+            <h3>初学坑<button style="color:#fff" class="btn" data-clipboard-target="#foo2">Copy</button></h3>
+            <p>以上是一个死循环吗</p>
+            <p>打标签循环continue</p>
+            <p>打标签循环break</p>
+            <p>那两个不是指针类型</p>
+            <p>看代码写结果*3</p>
+        </div>
+        <div class="col-md-1.7 ">
+            <h3>map坑<button style="color:#fff" class="btn" data-clipboard-target="#foo3">Copy</button></h3>
+            <p>看代码写结果</p>
+        </div>
+        <div class="col-md-1.7">
+            <h3>指针坑<button style="color:#fff" class="btn" data-clipboard-target="#foo4">Copy</button></h3>
+            <p>看代码写结果*2</p>
+        </div>
+        <div class="col-md-1.7">
+            <h3>func<button style="color:#fff" class="btn" data-clipboard-target="#foo5">Copy</button></h3>
+            <p>看代码写结果*3</p>
+        </div>
+        <div class="col-md-1.7 ">
+            <h3>用户输入<button style="color:#fff" class="btn" data-clipboard-target="#foo6">Copy</button></h3>
+            <p>看懂代码</p>
+        </div>
+        <div class="col-md-1.7 ">
+            <h3>结构体坑<button style="color:#fff" class="btn" data-clipboard-target="#foo7">Copy</button></h3>
+            <p>看代码写结果*1</p>
+            <p>结构体赋值谁不拷贝</p>
+        </div>
+    </div>
+</div>
+<script>
+    //必须要初始化 第一种初始化    
+    var clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+</script>
+<script>
+    function imgTk(id) {
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['auto'],
+            skin: 'layui-layer-nobg',
+            shadeClose: true,
+            content: $('#' + id)
+        });
+    }
+</script>
+<script>
+</script>

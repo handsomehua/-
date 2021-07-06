@@ -1,0 +1,50 @@
+<script src="/static/tools/clipboard.js-master/dist/clipboard.min.js"></script>
+<h4 class="center" style="color: #CD70D6;background-color:#020202">
+    go试题</h4>
+<style>
+    body {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .box {
+        counter-reset: count;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 100%;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+</style>
+{include file="/common/notes/go/copywriting_copy"/}
+<div class="box">
+    <div class="box1">
+        <p><span class="ss">猜年龄游戏，要求：允许用户最多尝试3次，3次都没猜对的话，就直接退出，如果猜对了，打印恭喜信息并退出<button style="color:#fff" class="btn" data-clipboard-target="#text1">Copy</button></span></p>
+        <p><span class="ss">把用户输入信息放到切片中<button style="color:#fff" class="btn" data-clipboard-target="#text2">Copy</button></span></p>
+        <p><span class="ss">在项目中实现注册成功之后向用户发送：短信，邮箱，微信的消息提醒<button style="color:#fff" class="btn" data-clipboard-target="#text3">Copy</button></span></p>
+        <p><span class="ss">根据时间创建文件夹<button style="color:#fff" class="btn" data-clipboard-target="#text4">Copy</button></span></p>
+    </div>
+</div>
+<script>
+    //必须要初始化 第一种初始化    
+    var clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+</script>

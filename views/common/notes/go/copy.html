@@ -1,0 +1,300 @@
+<textarea id="foo" style="width:0px;height:0px">
+	//---------------1
+	//切片删除元素
+	var arr = [...]int{11, 22, 33, 44, 55, 66}
+	deleteIndex := 2
+
+	result := append(arr[:deleteIndex], arr[deleteIndex+1:]...)
+	fmt.Println(result) //[11 22 44 55 66 66]
+	fmt.Println(arr)    //[11 22 44 55 66]
+
+	//--------------2
+	//看代码写结果
+	v1 := make([]int, 2, 5)
+	fmt.Println(v1[0])   //0
+	fmt.Println(len(v1)) //2
+	fmt.Println(cap(v1)) //5
+
+	//--------------3
+	//看代码写结果
+	v2 := make([]int, 2, 5)
+	v3 := append(v2, 123)
+	fmt.Println(len(v2), cap(v2)) //2 5
+	fmt.Println(len(v3), cap(v3)) //3 5
+	fmt.Println(v2)               //[0 0]
+	fmt.Println(v3)               //[0 0 123]
+
+	//--------------4
+	//看代码写结果
+	v4 := make([]int, 2, 5)
+	v5 := append(v4, 123)
+	v4[0] = 999
+	fmt.Println(v4) //[999 0]
+	fmt.Println(v5) //[999 0 123]
+
+	//--------------5
+	//看代码写结果
+	v6 := make([]int, 3, 4)
+	v7 := append(v6, 123)
+	v6[0] = 999
+	fmt.Println(v6) //[999 0]
+	fmt.Println(v7) //[0 0 123]
+
+	//--------------6
+	//看代码写结果
+	v8 := make([]int, 2, 2)
+	v9 := v8[0:2]
+	v8[0] = 111
+	fmt.Println(v8) //[111 0]
+	fmt.Println(v9) //[111 0]
+
+	//--------------7
+	//看代码写结果
+	v10 := [][]int{[]int{11, 22, 33, 44}, []int{44, 55}}
+	v10[0][2] = 99
+	fmt.Println(v10) //[[11 22 99 44] [44 55]]
+
+	//--------------8
+	//看代码写结果
+	v11 := [][]int{[]int{11, 22, 33, 44}, []int{44, 55}}
+	v12 := v11[0]
+	v12[2] = 69
+
+	fmt.Println(v11)
+
+	//--------------9
+	//看代码写结果
+	v13 := [][]int{[]int{11, 22, 33, 44}, []int{44, 55}}
+	v14 := append(v13[0], 99)
+	v14[2] = 69
+	//注意v13第2个元素还是33，因为扩容了v14不再是同一块地址
+	fmt.Println(v13) //[[11 22 33 44] [44 55]]
+	fmt.Println(v14) //[11 22 69 44 99]
+
+	//--------------10
+	//看代码写结果
+	v15 := [][]int{make([]int, 2, 5), make([]int, 2, 5)}
+	v16 := append(v15[0], 99)
+	fmt.Println(v15) //[[0 0] [0,0]]
+	fmt.Println(v16) //[0 0 99]
+	v16[0] = 69
+	fmt.Println(v15) //[[69 0] [0,0]]
+	fmt.Println(v16) //[69 0 99]
+</textarea>
+
+<textarea id="foo2" style="width:0px;height:0px">
+	
+//-----------------1
+var number1 = 99
+
+func main() {
+	number1 := 88
+	if true {
+		number1 = 123
+		fmt.Println(number1)
+	}
+	fmt.Println(number1)
+
+	//-----------------2
+	fmt.Println("开始")
+	number2 := 1
+	for number2 < 5 {
+		fmt.Println("爸爸")
+		number2 = 10
+	}
+	fmt.Println("结束")
+
+	//以上是一个死循环吗：
+
+	//-----------------3
+	//打标签循环continue
+f1:
+	for i := 1; i < 3; i++ {
+		for j := 1; j < 5; j++ {
+
+			if j == 3 {
+				continue f1
+			}
+			fmt.Println(i, j)
+		}
+
+	}
+	//以上输出结果：
+
+	//-----------------4
+	//打标签循环break
+f2:
+	for i := 1; i < 3; i++ {
+		for j := 1; j < 5; j++ {
+
+			if j == 3 {
+				break f2
+			}
+			fmt.Println(i, j)
+		}
+
+	}
+
+	//-----------------5
+	//以上输出结果：
+	var v1 big.Int
+	var v2 *int
+	v3 := new(int)
+	var v4 int
+	fmt.Println(v1, v2, v3, v4)
+
+	//-----------------6
+	//打印结果是:
+	name1 := [2]string{"武沛齐", "alex"}
+	name2 := name1
+	name1[1] = "逗逼"
+	fmt.Println(name1, name2)
+	//打印结果是：
+}
+
+</textarea>
+<textarea id="foo3" style="width:0px;height:0px">
+	v1 := map[string]string{"n1": "武沛齐", "n2": "alex"}
+	v2 := v1
+
+	v1["n1"] = "wupeiqi"
+	fmt.Println(v1) //map[n1:wupeiqi n2:alex]
+	fmt.Println(v2) //map[n1:wupeiqi n2:alex]
+</textarea>
+<textarea id="foo4" style="width:0px;height:0px">
+	//-----------------1
+	//指针一
+	var name string = "武沛齐"
+	var pointer *string = &name
+	fmt.Println(pointer) 
+
+	//-----------------2
+	//以上那两个不是指针类型：
+	v7 := 0.1
+	v8 := 0.2
+	result := v7 + v8
+	fmt.Println(result)
+
+	//------------------3
+	v1 := "武沛齐"
+	v2 := &v1
+	fmt.Println(v1, v2, *v2) //结果
+
+	//------------------4
+	v3 := "武沛齐"
+	v4 := &v3
+	v3 = "alex"
+	fmt.Println(v3, *v4) //alex alex
+</textarea>
+<textarea id="foo5" style="width:0px;height:0px">
+	//------------------1
+	//指针应用场景1
+	package main
+import "fmt"
+
+func changeData(data string) {
+	data = "哈哈哈哈哈"
+}
+func main() {
+	name := "武沛齐"
+	//本质上会将name的值拷贝一份，并赋值给data
+	changeData(name)
+	fmt.Println(name) //武沛齐
+}
+	//--------------2
+	//指针应用场景2
+	package main
+
+import "fmt"
+
+func changeData(ptr *string) {
+	*ptr = "哈哈哈哈哈"
+}
+func main() {
+	name := "武沛齐"
+	changeData(&name)
+	fmt.Println(name)
+}
+	//--------------3
+	package main
+
+import "fmt"
+
+func SendEmail(arg []int) {
+	arg[0] = 666
+}
+func main() {
+	dataList := []int{11, 22}
+	SendEmail(dataList)
+	fmt.Println(dataList) //打印结果是
+}
+	//--------------4
+	package main
+
+import "fmt"
+
+func SendEmail(arg *[2]int) {
+	arg[0] = 666
+}
+func main() {
+	dataList := [2]int{11, 22}
+	SendEmail(&dataList)
+	fmt.Println(dataList) //打印结果是
+}
+</textarea>
+<textarea id="foo6" style="width:0px;height:0px">
+	//指针应用场景3
+	var username string
+	fmt.Printf("请输入用户名：")
+
+	fmt.Scanf("%s", &username)
+
+	if username == "武沛齐" {
+		fmt.Println("登入成功")
+	} else {
+		fmt.Println("登入失败")
+	}
+</textarea>
+<textarea id="foo7" style="width:0px;height:0px">
+	//--------------1
+	type Person struct {
+		name string
+		age  int
+	}
+	p1 := Person{name: "二狗子", age: 19}
+
+	p2 := &p1
+
+	fmt.Println(p1)
+	fmt.Println(p2)
+
+	p1.name = "alex"
+	fmt.Println(p1)
+	fmt.Println(p2)
+
+	//--------------2
+	//结构体赋值谁不拷贝
+	//谁不拷贝？实际上是拷贝了，拷贝的是指针
+	type Person struct {
+		name   string
+		age    int
+		hobby  [2]string
+		num    []int
+		parent map[string]string
+	}
+	p1 := Person{
+		name:   "二狗子",
+		age:    19,
+		hobby:  [2]string{"裸奔", "大保健"},                                  //拷贝
+		num:    []int{69, 19, 99, 38},                                   //未拷贝（实际上是拷贝了，拷贝的是指针）
+		parent: map[string]string{"father": "alex", "mother": "Monika"}, //未拷贝（实际上是拷贝了，拷贝的是指针）
+	}
+	p2 := p1
+
+	fmt.Println(p1)
+	fmt.Println(p2)
+	p1.hobby[0] = "搓澡"
+	p1.num[0] = 8888
+	fmt.Println(p1)
+	fmt.Println(p2)
+</textarea>

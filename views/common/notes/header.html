@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="/static/bootstrap-4.6.0/dist/css/bootstrap.min.css" media="all" />
+<script src="/static/bootstrap-4.6.0/dist/js/bootstrap.min.js"></script>
+<script src="/static/bootstrap-4.6.0/popper.js/popper.min.js"></script>
+<style>
+    body {
+        background-color: #121212;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+    .img {
+        border: 3px solid #CD70D6;
+    }
+</style>
+<style>
+    .container>div>div:nth-child(1) {
+        background-color: red;
+    }
+    
+    .container>div>div:nth-child(2) {
+        background-color: goldenrod;
+    }
+    
+    .container>div>div:nth-child(3) {
+        background-color: greenyellow;
+    }
+    
+    .row {
+        background-color: #121212;
+        height: calc(100vh);
+        margin-top: 1px;
+    }
+    
+    .hot-left {
+        color: #D77A68;
+    }
+    
+    .hot-right {
+        color: #98C379;
+    }
+</style>
+
+<script>
+    function displauy(name) {
+        var arr = ["hot1", "hot2", "hot3"];
+        arr.forEach(element => {
+            if (element == name) {
+                var str = $('#' + name).attr('style');
+                if (str.match('none')) {
+                    $('#' + name).attr('style', 'display: show')
+                }
+            } else {
+                $('#' + element).attr('style', 'display: none')
+            }
+        });
+    }
+</script>

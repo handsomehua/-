@@ -1,0 +1,53 @@
+{include file="common/header"/}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+</style>
+
+<body style="background: #121212;">
+    <!--默认显示奖项数量  -->
+    <?php $length=3; ?>
+    <div id="default" class="1"></div>
+    {include file="common/www"/}
+    <div class="layui-form-item center ">
+        <dspan id="revamp " class="<?php echo isset($length) ? $length: '3';?> display">
+            <span>
+		    <span lay-value="2" class="layui-btn layui-btn-sm fdsf" id="renewa1" style="font-size: 25px;background-color: #009688;color: #121212;" onclick="switchover('1')">&nbsp;GO&nbsp;</span>
+            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa2" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('2')">&nbsp;框架&nbsp;</span>
+            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa3" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('3')">&nbsp;linux&nbsp;</span>
+            </span>
+            <span class="">
+            <span onclick="prompt('fast?path=public')" style="float: right;background: #009688;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>public</span>
+            </span>
+            <span onclick='window.open("/index.php/test/test.html")' style="float: right;background: #1E9FFF;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click'>测试</span>{:widgets('wwwLeft')} {include file="common/fast"/}
+    </div>
+    <div id="template1">
+        <iframe src="version?id=1&vscode=1" width="100%" height="1000px" frameborder="no" border="0"></iframe>
+    </div>
+    <!-- <div id="template2" style="display: none">
+        <iframe src="version?id=1&vscode=2" width="100%" height="1000px" frameborder="no" border="0"></iframe>
+    </div> -->
+    <div id="template3" style="display: none">
+        <iframe src="version?id=1&vscode=3" width="100%" height="1000px" frameborder="no" border="0"></iframe>
+    </div>
+    </div>
+    </script>
+    <script>
+        function prompt(path) {
+            console.log(path);
+            layui.use(['layer'], function() {
+                var layer = layui.layer;
+                layer.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: 0,
+                    shadeClose: true,
+                    area: ['100%', '70%'],
+                    skin: 'yourclass',
+                    content: '<iframe src="' + path + '" width="100%"  height="1650px" frameborder="no" border="0"></iframe>'
+                });
+            })
+        }
+    </script>

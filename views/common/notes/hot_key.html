@@ -1,0 +1,27 @@
+{include file="common/header"/} {include file="common/notes/header"/}
+<style>
+    p {
+        background: #181A1F;
+    }
+    
+    p:nth-child(odd) {
+        background: #020202;
+    }
+</style>
+
+<body>
+    <div style="float: right;">
+        <span type='button' onclick='displauy("hot1")'><img style="background-color: #020202" src="/static/images/notes/vim.png" width="33px"></span>
+        <span type='button' onclick='displauy("hot2")'><img style="background-color: #020202" src="/static/images/notes/vscode.png" width="33px"></span>
+        <span type='button' onclick='displauy("hot3")'><img style="background-color: #020202" src="/static/images/notes/win10.png" width="33px"></span>
+    </div>
+    <div id='hot1' class="hot" style='display:show;'>
+        {include file="common/notes/hot_key/vim"/}
+    </div>
+    <div id='hot2' class="hot" style='display:none;'>
+        {include file="common/notes/hot_key/vscode"/}
+    </div>
+    <div id='hot3' class="hot" style='display: none;'>
+        {include file="common/notes/hot_key/window"/}
+    </div>
+</body>

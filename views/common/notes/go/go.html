@@ -1,0 +1,76 @@
+<h4 class="center" style="color: #CD70D6;background-color:#020202">
+    go试题</h4>
+<style>
+    body {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .box {
+        counter-reset: count;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 100%;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+</style>
+
+<div class="box">
+    <div class="box1">
+        <p><span class="ss">package main 入口文件，可以生成可执行文件</span></p>
+        <p><span class="ss">方法定义含义:1.大写包外部可以访问 2.小写只能包内部访问</span></p>
+        <p><span class="ss">不建议使用 print println</span></p>
+        <p><span class="ss">传值 &表示内存地址 *表示值</span></p>
+        <p><span class="ss">局部变量定义不使用会报错，全局变量可以定义不使用</span></p>
+        <p><span class="ss">什么时候使用常量，当声明一个值不会被修改，才适合使用常量</span></p>
+        <p><span class="ss">fmt.Scan和fmt.Scanln区别就是一个没有输完回车会一直等待，另一个回车就算全部输完了</span></p>
+        <p><span class="ss">fmt.Scan和fmt.Scanln和fmt.Scanf有一个缺陷，无法获取空格后的内容</span></p>
+        <p><span class="ss">fmt.Sprintf和fmt.Printf的区别：一个返回拼接字符串不打印，另一个返回拼接字符串并打印</span></p>
+        <p><span class="ss">int8只能和int8相加或比较，int16 int32同理，不相同必须强制转换后在相加或比较</span></p>
+        <p><span class="ss">指针是为了节省内存</span></p>
+        <p><span class="ss">什么是指针？指针，是一种数据类型，用于表示数据的内存地址</span></p>
+        <p><span class="ss">浮点型加减乘除会丢失精度，解决办法使用decimal包</span></p>
+        <p><span class="ss">字节集合[232 146 139 233 131 180 229 141 142]字节集合可以转中文，中文也可以转字节集合</span></p>
+        <p><span class="ss">rune的集合[33931 37108 21326]rune的集合可以转中文，中文也可以转rune的集合</span></p>
+        <p><span class="ss">字符串本质上不可以被修改，修改不会修改原来的值，而是在生成一个值，老的值不会变</span></p>
+        <p><span class="ss">make只用于 切片,字典类型map,channel</span></p>
+        <p><span class="ss">推荐使用make创建切片：因为指定了容量就默认有了这么多存储位置，就不用在扩容</span></p>
+        <p><span class="ss">切片容量指存储的个数</span></p>
+        <p><span class="ss">切片扩容后容量则会翻一倍</span></p>
+        <p><span class="ss">切片不是数组</span></p>
+        <p><span class="ss">通过切片切出来的数据和原切片地址是同一个地址</span></p>
+        <p><span class="ss">切片通过append追加元素如果扩容了，和原切片不再是同一个地址</span></p>
+        <p><span class="ss">切片和数组的区别？:切片在定义的时候可以定义长度和容量，在添加数据的时候可以自动扩容，数组在声明就定死了</span></p>
+        <p><span class="ss">new和make的区别？:new返回的是一个指针，make返回的是一个对象</span></p>
+        <p><span class="ss">map只声明是无法给里面添加row["name"] = 888值的，只能用于整体赋值</span></p>
+        <p><span class="ss">map键不能重复并且键必须可哈希(int/bool/float/string/array)</span></p>
+        <p><span class="ss">map无论是否存在扩容都指向同一个地址</span></p>
+        <p><span class="ss">什么是结构体？结构体是一个复合类型，用于表示一组数据</span></p>
+        <p><span class="ss">结构体可以定义在函数内也可以定义在函数外</span></p>
+        <p><span class="ss">结构体定义首字母大写</span></p>
+        <p><span class="ss">结构体指针存储流程：结构体指针开辟两块内存，一块存值的地址，一块存值，而初始化结构体是开辟一块内存存储值</span></p>
+        <p><span class="ss">结构体赋值p2 := p1是内部将p1重新拷贝一份给p2</span></p>
+        <p><span class="ss">结构体指针赋值p1 := &Person{"武",18} p2 := p1是将指针复制一份给p2,所以当p1重新赋值,p2也会变</span></p>
+        <p><span class="ss">...变长参数只能放在最后且只能有一个</span></p>
+        <p><span class="ss">多个defer挺迟执行,顺序是倒序执行</span></p>
+        <p><span class="ss">强制结构体工厂，分为公有和私有</span></p>
+        <p><span class="ss">GO语言数据类型有：整型 浮点型 布尔型 字符串 数组 指针 切片 字典 结构体 接口</span></p>
+        <p><span class="ss">json序列化结构体字段首字母必须大写，不大写必须加标签 `json:"name"`</span></p>
+        <p><span class="ss">协程可以实现并行，也就是让多个任务并行执行</span></p>
+        <p><span class="ss">使用goroutine协程运行速度快一倍多</span></p>
+    </div>
+</div>

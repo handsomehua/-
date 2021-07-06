@@ -1,0 +1,88 @@
+{include file="common/header"/}
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+    body {
+        background-color: #1D1F23
+    }
+    
+    p {
+        color: #C078DD;
+        font-size: 22px;
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 25px;
+    }
+    
+    .box {
+        counter-reset: count;
+    }
+    
+    p {
+        background: #1D1F23;
+        color: #C078DD;
+    }
+    
+    p:nth-child(odd) {
+        color: #98C379;
+        background: #0D0D0D;
+    }
+</style>
+
+
+<div class="box">
+    <p>Go语言中int占多少个字节</p>
+    <p>整型中有符合和无符号是什么意思</p>
+    <p>整型可以表示的最大范围是多少？超出怎么办</p>
+    <p>什么是nil</p>
+    <p>十进制是以整型方式存在，其他进制则是以字符串的形式存在？如何实现进制的转换？</p>
+    <p>简述如下代码的意义
+        <br>var v1 int
+        <br> var v2 *int
+        <br> var v3 = new(int)
+    </p>
+    <p>浮点型为什么有时无法精确表示小数</p>
+    <p>如何使用第三方包decimal</p>
+    <p>简述ascii,unicode,utf-8</p>
+    <p>判断：GO语言中的字符串是utf-8编码的字节序列</p>
+    <p>什么是rune</p>
+    <p>判断：字符串是否可变</p>
+    <p>列举你记得的字符串的常用功能</p>
+    <p>字符串和"字节集合","rune集合"如何实现相互转换？</p>
+    <p>字符串如何实现高效的拼接</p>
+    <p>简述数组的存储原理</p>
+    <p>根据要求写代码 names := [3]string{"Alex","超级无敌小","傻儿子"}
+        <br>a.请根据索引获取"傻儿子"
+        <br>b.请根据索引获取"alex"
+        <br>c.请根据索引获取"超级无敌小"
+        <br> d.请将name数组的最后一个元素修改为"大烧饼"
+    </p>
+    <p>看代码写输出结果
+        <br>var nestData [3][2]int
+        <br>fmt.println(nestData)
+    </p>
+    <p>请声明一个有3个元素的数组，元素的类型是有两个元素的数组，并在数组中初始化值。例如：
+        <br>{php} echo str_repeat("&nbsp;", 5); {/php}[
+        <br> {php} echo str_repeat("&nbsp;", 10); {/php}["alex","qqee2"],
+        <br>{php} echo str_repeat("&nbsp;", 10); {/php}["eric","admuin"],
+        <br>{php} echo str_repeat("&nbsp;", 10); {/php}["tony","qfdqd"]
+        <br>{php} echo str_repeat("&nbsp;", 5); {/php}]
+    </p>
+    <p>循环如下数组并使用字符串格式化输出如下内容：
+        <br>dataList := [
+        <br>{php} echo str_repeat("&nbsp;", 5);{/php}["alex","qqee2"],
+        <br>{php} echo str_repeat("&nbsp;", 5);{/php}["eric","admuin"],
+        <br>{php} echo str_repeat("&nbsp;", 5);{/php}["tony","qfdqd"]
+        <br>] 请补充代码...
+        <br>最终实现输出：
+        <br>我是alex,我的密码是qqee2
+        <br>我是eric,我的密码是admuin
+        <br>我是tony,我的密码是qfdqd
+    </p>
+</div>

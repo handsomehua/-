@@ -1,0 +1,108 @@
+<textarea id="text1" style="width:0px;height:0px">
+	flag := true
+	i := 1
+	for flag {
+		var name string
+		fmt.Print("请输入年龄：")
+		fmt.Scanln(&name)
+		if name == "66" {
+			flag = false
+			fmt.Println("恭喜答对了")
+		} else {
+			if i == 3 {
+				fmt.Println("很遗憾，三次机会已用完")
+				break
+			}
+			i = i + 1
+		}
+	}
+</textarea>
+<textarea id="text2" style="width:0px;height:0px">
+	//存在小bug
+	type School struct {
+		band string
+		city string
+	}
+
+	var schoolList []School
+	for {
+		//用户输入品牌和城市
+		var band, city string
+		fmt.Printf("请输入品牌：")
+		fmt.Scanf("%s", &band)
+		fmt.Println(band)
+		if band == "Q" {
+			fmt.Println("dfdf")
+			break
+		}
+		fmt.Printf("请输入城市：")
+		fmt.Scanf("%s", &city)
+		//创建一个结构体对象
+		sch := School{band: band, city: city}
+		//把结构体对象放到切片中
+		schoolList = append(schoolList, sch)
+	}
+	fmt.Println(schoolList) //
+</textarea>
+<textarea id="text3" style="width:0px;height:0px">
+	package main
+
+	import "fmt"
+	
+	type IMessage interface {
+		send() bool
+	}
+	type Email struct {
+		email   string
+		content string
+	}
+	
+	func (p *Email) send() bool {
+		fmt.Println("发送邮件提醒", p.email, p.content)
+		return true
+	}
+	
+	type Wechat struct {
+		wid     string
+		content string
+	}
+	
+	func (p *Wechat) send() bool {
+		fmt.Println("发送微信提醒", p.wid, p.content)
+		return true
+	}
+	func something(objectList []IMessage) {
+		for _, item := range objectList {
+			result := item.send()
+			fmt.Println(result)
+		}
+	}
+	func main() {
+		//用户注册...
+		messageObjectList := []IMessage{
+			&Email{"wupeiqi@live.com", "注册成功"},
+			&Wechat{"wupeiqi@live.com", "注册成功"},
+		}
+		something(messageObjectList)
+	}
+	
+</textarea>
+<textarea id="text4" style="width:0px;height:0px">
+	package main
+
+import (
+	"os"
+	"time"
+)
+
+func main() {
+	//获取当前时间（本地时间）Time类型-结构体
+	currentDate := time.Now()
+
+	//格式化处理：将Time类型时间转换为字符串
+	dateString := currentDate.Format("2006_01_02_15_04_05") //表示 %Y %m %d %H %M %S _表示拼接符合
+
+	//创建文件夹
+	os.Mkdir(dateString, 0755)
+}
+</textarea>

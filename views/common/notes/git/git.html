@@ -1,0 +1,55 @@
+<h4 class="center" style="color: #CD70D6;background-color:#020202">
+    git</h4>
+<style>
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 50%;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+    
+    .box1 {
+        width: 100% !important;
+    }
+</style>
+<div class="box">
+
+
+</div>
+
+<div class="box">
+    <div class="box1">
+        <p>CentOS7安装git<span class="ss"><br>{php} echo str_repeat("&nbsp;", 11); {/php}yum install -y git</span></p>
+        <p>linux搭建远程仓库
+            <span class="ss">
+	    <br>{php} echo str_repeat("&nbsp;", 10); {/php} 初始化远程仓库git init --bare shop.git<span style="position:relative;top:3.5px; "><img onclick="fyImg('/static/images/bj_img/git/1.png')" style="vertical-align:top;" src="/static/images/tp.png" width="22px" height="17px;" /></span>
+            </span>
+        </p>
+        <p>git clone,pull,push免密码</p>
+        <span class="ss">
+		{php} echo str_repeat("&nbsp;", 10); {/php}1.生成 .ssh 文件<span style="position:relative;top:3.5px; ">
+			<img onclick="fyImg('/static/images/bj_img/git/2.png')" style="vertical-align:top;" src="/static/images/tp.png" width="22px" height="17px;" /></span>
+        <br>{php} echo str_repeat("&nbsp;", 10);{/php}2.vim /etc/ssh/sshd_config
+        <br>{php} echo str_repeat("&nbsp;", 10); {/php}3.加入StrictModes no RSAAuthentication yes PubkeyAuthentication yes<span style="position:relative;top:3.5px; "><img onclick="fyImg('/static/images/bj_img/git/3.jpg')" style="vertical-align:top;" src="/static/images/tp.png" width="22px" height="17px;" /></span>
+        <br>{php} echo str_repeat("&nbsp;", 10); {/php}4.启动ssh服务 /bin/systemctl start sshd.service
+        <br>{php} echo str_repeat("&nbsp;", 10); {/php}5.写入 cat id_rsa.pub >> authorized_keys
+        </span>
+    </div>
+</div>
+
+<script>
+    function fyImg(src) {
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shadeClose: true,
+            content: '<img src=' + src + ' width="110%" height="110%" style="overflow-x: hidden;overflow-y: hidden;"/>'
+        });
+    }
+</script>

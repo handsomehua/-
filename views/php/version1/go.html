@@ -1,0 +1,95 @@
+{include file="common/header"/}
+
+<body style="background: #121212;">
+
+    <!--默认显示奖项数量  -->
+    <?php $length=3; ?>
+
+    <div id="default" class="1"></div>
+    <span style="float: right;" onclick='window.open("http://localhost:99//index.php/Go/go.html?id=1")'><i class='fa layui-icon layui-icon-add-1' style="color: #C078DD;font-size: 26px; "></i></span>
+    <div class="layui-form-item center ">
+        <dspan id="revamp " class="<?php echo isset($length) ? $length: '3';?> display">
+            <span>
+		    <span lay-value="2" class="layui-btn layui-btn-sm fdsf" id="renewa1" style="font-size: 25px;background-color: #009688;color: #121212;" onclick="switchover('1')">&nbsp;<input type="hidden" name="" value="1">GO&nbsp;</span>
+            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa2" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('2')">&nbsp;<input type="hidden" name="prize[2][level]" value="2">框架&nbsp;</span>
+            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa3" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('3')">&nbsp;<input type="hidden" name="prize[3][level]" value="3">linux&nbsp;</span>
+            </span>
+            <span class="">
+		    <span onclick="prompt('examination?name=go&id=1')" style="float: right;background: #1E9FFF;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' >试题</span>
+            <span onclick="prompt('error?name=go&id=1')" style="float: right;background: #009688;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>error</span>
+            </span>
+
+    </div>
+    <!-- <span style="color:#C078DD;font-size: 16px;float: right;">^(不推荐)+(重点)</span> -->
+    <div id="template1">
+        <iframe src="version?id=1&vscode=1" width="100%" height="800px" frameborder="no" border="0"></iframe>
+    </div>
+    <div id="template2" style="display: none">
+        <!-- <iframe src="version?id=1&vscode=2" width="100%" height="800px" frameborder="no" border="0"></iframe> -->
+    </div>
+    <div id="template3" style="display: none">
+        <iframe src="version?id=1&vscode=3" width="100%" height="800px" frameborder="no" border="0"></iframe>
+    </div>
+    </div>
+
+    <script>
+        function showNone(class_name) {
+            $('.' + class_name).slideToggle();
+        }
+        $(function() {
+            for (var i = 1; i <= 6; i++) {
+                showNone('GO' + i);
+            }
+            for (var i = 1; i <= 6; i++) {
+                showNone('GO-' + i);
+            }
+            for (var i = 1; i <= 6; i++) {
+                showNone('GO*' + i);
+            }
+        })
+    </script>
+
+    <script>
+        function displauy() {
+            var id = $("#displauy");
+            if (id.attr("style") == "display: none") {
+                id.attr("style", "display: show")
+            } else {
+                id.attr("style", "display: none")
+            }
+        }
+        // #----------------------------------------奖项编辑--------------------------------------------# 
+        function switchover(id) {
+            for (var i = 1; i <= 5; i++) {
+                $("#template" + i).attr('style', 'display:none');
+            }
+            $("#renewa" + id).attr('style', 'font-size: 25px;background-color: #009688;color: #121212');
+            $("#renewa" + id).prevAll().attr('style', 'font-size: 25px;background-color: #5FB878;color: #121212');
+            $("#renewa" + id).nextAll().attr('style', 'font-size: 25px;background-color: #5FB878;color: #121212');
+            $("#template" + id).attr('style', '');
+            $("#default").attr('class', id);
+
+            // var number = $("#revamp").attr("class");
+            // for (var i = number; i <= 26; ++i) {
+            //     var num = parseInt(i) + 1;
+            //     $("#renewa" + num).attr("style", 'font-size: 16px;background-color: #5FB878;display:none');
+            // }
+        }
+    </script>
+    <script>
+        function prompt(path) {
+            console.log(path);
+            layui.use(['layer'], function() {
+                var layer = layui.layer;
+                layer.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: 0,
+                    shadeClose: true,
+                    area: ['100%', '70%'],
+                    skin: 'yourclass',
+                    content: '<iframe src="' + path + '" width="100%"  height="1650px" frameborder="no" border="0"></iframe>'
+                });
+            })
+        }
+    </script>

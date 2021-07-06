@@ -1,0 +1,98 @@
+<style>
+    .top {
+        margin-top: 8px;
+    }
+    
+    .wwwRight {
+        margin-top: 5px;
+    }
+    
+    .www-txsp {
+        margin-top: 3px;
+    }
+    
+    .www {
+        margin-top: 3px;
+    }
+    
+    .b {
+        color: #fff
+    }
+    
+    .go {
+        margin-top: 7px;
+    }
+</style>
+<span style="float: right;display:none;" class="right www" onclick='window.open("http://localhost/index.php/admin/index/index.html")'><img src="/static/images/flw.png" width="30px"></span>
+<span style="float: right;display:none;" class="right go" onclick='window.open("/index.php/go/go.html?id=1")'><img src="/static/images/wwwgo.png" width="35px"></span>
+<span style="float: right;display:none;" class="right top" onclick='window.open("/index.php/web/web.html?id=1")'><span  style="color: #000000;font-size:16px;border-radius:50%;background-color:#C078DD;padding: 3px;">web</span>&nbsp;</span>
+
+<span style="float: right;display:none;" class="right top" onclick='window.open("/index.php/php/php.html?id=1")'><span  style="color: #000000;font-size:16px;border-radius:50%;background-color:#C078DD;padding: 3px;">php</span>&nbsp;&nbsp;</span>
+
+
+
+<span style="float: right;">{:widgets('wwwRight')}</span>
+
+
+
+
+<span style="float: right;" class='right' id="gd2" onclick="wwwRight()"><img src="/static/images/gd.png"  width="35px">&nbsp;</span>{:widgets('www')}
+
+<span class='gd' id="gd" onclick="wwwLeft()"><img src="/static/images/gd.png"  width="35px">{php} echo str_repeat("&nbsp;", 10); {/php}</span>
+<script>
+    $(document).ready(function() {
+        $('.gd').hover(function() {
+            var id = $(".img_show").attr("style", "display: show")
+            setTimeout(function() {
+                $(".img_show").attr("style", "display: none")
+            }, 25000);
+            // $(".gd").attr("style", "display: none")
+        }, function() {
+
+        });
+
+        $('.right').hover(function() {
+            var id = $(".right").attr("style", "float: right;display: show")
+            setTimeout(function() {
+                $(".right").attr("style", "float: right;display: none")
+                $("#gd2").attr("style", "float: right;display: show")
+                $(".bjRight").attr("style", "float: right;display: none")
+
+            }, 25000);
+
+        }, function() {
+
+        });
+
+        $('.bij').hover(function() {
+            var id = $(".bjRight").attr("style", "float: right;display: show")
+            $(".ycRight").attr("style", "display: none")
+
+        }, function() {
+
+        });
+    });
+
+    function wwwRight() {
+        $(".www-right").attr("style", "display: show")
+
+
+    }
+
+    function wwwLeft() {
+        $(".www-left").attr("style", "display: show")
+    }
+
+    // #----------------------------------------奖项编辑--------------------------------------------# 
+    function switchover(id) {
+
+        for (var i = 1; i <= 5; i++) {
+            $("#template" + i).attr('style', 'display:none');
+        }
+        $("#renewa" + id).attr('style', 'font-size: 25px;background-color: #009688;color: #121212');
+        $("#renewa" + id).prevAll().attr('style', 'font-size: 25px;background-color: #5FB878;color: #121212');
+        $("#renewa" + id).nextAll().attr('style', 'font-size: 25px;background-color: #5FB878;color: #121212');
+        $("#template" + id).attr('style', 'display:show');
+        $("#default").attr('class', id);
+    }
+</script>
