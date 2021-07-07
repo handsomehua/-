@@ -179,6 +179,13 @@ class WidGets extends BaseController
                 "none",
                 "www-txsp"
             ],
+            [
+                "https://www.bilibili.com/video/BV14T4y1g7h9?p=1", //大
+                "/static/images/大.png",
+                "26",
+                "none",
+                "www-txsp"
+            ],
             ];
         
         
