@@ -10,8 +10,8 @@ class WidGets extends BaseController
     {
         $arr = [
         [
-            // "http://99cc.vip/public/tools/vscode_snippet/index.html", //vscode转义
-            "http://localhost:89/",
+            "http://99cc.vip/public/tools/vscode_snippet/index.html", //vscode转义
+            // "http://localhost:89/",
             "/static/images/vscode.png",
             "33",
             "none"
@@ -47,17 +47,18 @@ class WidGets extends BaseController
             "none"
         ],
         [
+            "https://pkg.go.dev/", //go内置包文档
+            "/static/images/GO3.png",
+            "28",
+            "none"
+        ],
+        [
             "http://47.112.230.42:8888/001cdf74", //宝塔
             "/static/images/bt.png",
             "35",
             "none"
         ],
-        [
-            "https://guanfang.ke.qq.com/#tab=1&category=-1", //腾讯课堂
-            "/static/images/xwm1.png",
-            "35",
-            "none"
-        ],
+
         [
             "https://bazhan.me/", //网易云课堂
             "/static/images/zzx.png",
@@ -78,11 +79,12 @@ class WidGets extends BaseController
             "none"
         ],
         [
-            "https://www.aliyun.com/activity/618/2021?utm_content=se_1009541079", //阿里云服务器
-            "/static/images/favicon.ico",
-            "19",
+            "https://dart.dev/", //Dart
+            "/static/images/dart.png",
+            "28",
             "none"
         ],
+    
         [
             "https://translate.google.cn/", //谷歌翻译
             "/static/images/翻译.png",
@@ -102,6 +104,7 @@ class WidGets extends BaseController
     public static function wwwLeft()
     {
         $arr = [
+    
             [
                 "https://tool.lu/timestamp", //时间戳转换
                 "/static/images/sjcz.png",
@@ -159,6 +162,13 @@ class WidGets extends BaseController
                 "www-txsp"
             ],
             [
+                "https://guanfang.ke.qq.com/#tab=1&category=-1", //腾讯课堂
+                "/static/images/xwm1.png",
+                "35",
+                "none",
+                "www-txsp"
+            ],
+            [
                 "https://www.imooc.com/?utm_term=%E6%85%95%E8%AF%BE%E7%BD%91&utm_campaign=SEM&utm_source=bdpinpai&bd_vid=9697697695921771572", //慕课网
                 "/static/images/慕课网 (1).png",
                 "30",
@@ -169,6 +179,13 @@ class WidGets extends BaseController
                 "https://study.163.com/course/courseLearn.htm?courseId=1210123803#/learn/video?lessonId=1281883081&courseId=1210123803", //网易云
                 "/static/images/武 (1).png",
                 "26",
+                "none",
+                "www-txsp"
+            ],
+            [
+                "http://www.thinkphp.cn/", //thinkphp
+                "/static/images/favicon.ico",
+                "19",
                 "none",
                 "www-txsp"
             ],
@@ -201,6 +218,13 @@ class WidGets extends BaseController
     {
         $arr = [
             [
+                "http://localhost/index.php/go/fast?path=shop", //购物
+                "/static/images/购物.png",
+                "30",
+                "none",
+                "www-txsp"
+            ],
+            [
                 "http://www.szwyxx.com/cmp/135-2-160.html", //斗罗大陆
                 "/static/images/dldl.png",
                 "28",
@@ -228,6 +252,7 @@ class WidGets extends BaseController
                 "none",
                 "www-txsp"
             ],
+        
             ];
         $str = '';
         foreach ($arr as  $k=>$v) {

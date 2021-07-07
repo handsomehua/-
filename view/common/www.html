@@ -23,7 +23,7 @@
         margin-top: 7px;
     }
 </style>
-<span style="float: right;display:none;" class="right www" onclick='window.open("http://localhost/index.php/admin/index/index.html")'><img src="/static/images/flw.png" width="30px"></span>
+<span style="float: right;display:none;" class="right www" onclick='window.open("http://localhost:88/index.php/admin/index/index.html")'><img src="/static/images/flw.png" width="30px"></span>
 <span style="float: right;display:none;" class="right go" onclick='window.open("/index.php/go/go.html?id=1")'><img src="/static/images/wwwgo.png" width="35px"></span>
 <span style="float: right;display:none;" class="right top" onclick='window.open("/index.php/web/web.html?id=1")'><span  style="color: #000000;font-size:16px;border-radius:50%;background-color:#C078DD;padding: 3px;">web</span>&nbsp;</span>
 
@@ -83,7 +83,10 @@
         $(".www-left").attr("style", "display: show")
     }
 
-    // #----------------------------------------奖项编辑--------------------------------------------# 
+    $(function() {
+            switchover(3)
+        })
+        // #----------------------------------------奖项编辑--------------------------------------------# 
     function switchover(id) {
 
         for (var i = 1; i <= 5; i++) {

@@ -68,9 +68,16 @@
         <p><span class="ss">...变长参数只能放在最后且只能有一个</span></p>
         <p><span class="ss">多个defer挺迟执行,顺序是倒序执行</span></p>
         <p><span class="ss">强制结构体工厂，分为公有和私有</span></p>
-        <p><span class="ss">GO语言数据类型有：整型 浮点型 布尔型 字符串 数组 指针 切片 字典 结构体 接口</span></p>
+        <p><span class="ss">GO语言数据类型有：整型 浮点型 布尔型 字符串 数组 指针 切片 字典 结构体 接口 特殊</span></p>
         <p><span class="ss">json序列化结构体字段首字母必须大写，不大写必须加标签 `json:"name"`</span></p>
         <p><span class="ss">协程可以实现并行，也就是让多个任务并行执行</span></p>
-        <p><span class="ss">使用goroutine协程运行速度快一倍多</span></p>
+        <p><span class="ss">使用goroutine协程运行速度快三倍左右</span></p>
+        <p><span class="ss">channel管道赋值是引用</span></p>
+        <p><span class="ss">channel管道被取值后可以在赋值</span></p>
+        <p><span class="ss">通过for循环遍历管道可以不关闭，通过for range遍历管道必须关闭</span></p>
+        <p><span class="ss">channel是一种类型，一种引用类型</span></p>
+        <p><span class="ss">使用select多路复用不需要关闭channel</span></p>
+        <p><span class="ss">读写锁，读同时可以读多个，写只能执行完一个才能下一个</span></p>
+        <p><span class="ss">空接口接收参数是空接口类型，运算需要使用类型断言</span></p>
     </div>
 </div>

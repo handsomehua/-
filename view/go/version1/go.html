@@ -15,9 +15,10 @@
         <dspan id="revamp " class="<?php echo isset($length) ? $length: '3';?> display">
             <span>
 		    <span lay-value="2" class="layui-btn layui-btn-sm fdsf" id="renewa1" style="font-size: 25px;background-color: #009688;color: #121212;" onclick="switchover('1')">&nbsp;GO&nbsp;</span>
-            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa2" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('2')">&nbsp;框架&nbsp;</span>
-            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa3" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('3')">&nbsp;linux&nbsp;</span>
+            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa2" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('2')">&nbsp;beego&nbsp;</span>
+            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa3" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('3')">&nbsp;Docker&nbsp;</span>
             </span>
+            <img class='img' onclick='wb("beego")' src="/static/images/文本.png" width="25px" height="25px">
             <span class="">
             <span onclick="prompt('fast?path=public')" style="float: right;background: #009688;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>public</span>
             </span>
@@ -26,9 +27,9 @@
     <div id="template1">
         <iframe src="version?id=1&vscode=1" width="100%" height="1000px" frameborder="no" border="0"></iframe>
     </div>
-    <!-- <div id="template2" style="display: none">
+    <div id="template2" style="display: none">
         <iframe src="version?id=1&vscode=2" width="100%" height="1000px" frameborder="no" border="0"></iframe>
-    </div> -->
+    </div>
     <div id="template3" style="display: none">
         <iframe src="version?id=1&vscode=3" width="100%" height="1000px" frameborder="no" border="0"></iframe>
     </div>
@@ -49,5 +50,11 @@
                     content: '<iframe src="' + path + '" width="100%"  height="1650px" frameborder="no" border="0"></iframe>'
                 });
             })
+        }
+
+        function wb(status) {
+            if (status == "beego") {
+                prompt("fast?path=beego")
+            }
         }
     </script>
