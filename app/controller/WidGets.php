@@ -29,9 +29,9 @@ class WidGets extends BaseController
             "none"
         ],
         [
-            "https://hao.360.com/", //360
-            "/static/images/notes/360°.png",
-            "26",
+            "https://hub.docker.com/", //Dart
+            "/static/images/docker.png",
+            "38",
             "none"
         ],
         [
@@ -78,12 +78,7 @@ class WidGets extends BaseController
             "28",
             "none"
         ],
-        [
-            "https://dart.dev/", //Dart
-            "/static/images/dart.png",
-            "28",
-            "none"
-        ],
+    
     
         [
             "https://translate.google.cn/", //谷歌翻译
@@ -190,6 +185,13 @@ class WidGets extends BaseController
                 "www-txsp"
             ],
             [
+                "https://hao.360.com/", //docker
+                "/static/images/notes/360°.png",
+                "26",
+                "none",
+                "www-txsp"
+            ],
+            [
                 "https://www.bilibili.com/video/BV1ME411Y71o?p=172&spm_id_from=pageDriver", //韩
                 "/static/images/韩.png",
                 "26",
@@ -217,16 +219,17 @@ class WidGets extends BaseController
     public static function wwwRight()
     {
         $arr = [
-            [
-                "http://localhost/index.php/go/fast?path=shop", //购物
-                "/static/images/购物.png",
-                "30",
-                "none",
-                "www-txsp"
-            ],
+     
             [
                 "http://www.szwyxx.com/cmp/135-2-160.html", //斗罗大陆
                 "/static/images/dldl.png",
+                "28",
+                "none",
+                "wwwRight"
+            ],
+            [
+                "https://v.qq.com/x/search/?q=%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9+%E7%AC%AC4%E5%AD%A3&stag=101&smartbox_ab=", //斗破苍穹
+                "/static/images/斗字-1 (1).png",
                 "28",
                 "none",
                 "wwwRight"
@@ -327,13 +330,13 @@ class WidGets extends BaseController
                 "none",
                 " bjRight shit"
             ],
-            [
-                "fast?path=go",
-                "/static/images/测试题 (1).png",
-                "25",
-                "none",
-                "ycRight bjRight shit"
-            ],
+            // [
+            //     "fast?path=go",
+            //     "/static/images/测试题 (1).png",
+            //     "25",
+            //     "none",
+            //     "ycRight bjRight shit"
+            // ],
             [
                 "fast?path=www",
                 "/static/images/notes/搜索 (2).png",
