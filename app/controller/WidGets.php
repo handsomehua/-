@@ -272,14 +272,14 @@ class WidGets extends BaseController
                 "/static/images/notes/隐私包装.png",
                 "30",
                 "none",
-                "bjRight bjRight1"
+                "ycRight bjRight1 shit"
             ],
             [
                 "fast?path=hot_key",
                 "/static/images/闪电.png",
                 "30",
                 "none",
-                "bjRight bjRight1"
+                "ycRight bjRight1"
             ],
             [
                 "fast?path=password",
@@ -318,7 +318,7 @@ class WidGets extends BaseController
             ],
             [
                 "fast?path=music",
-                "/static/images/耳机.png",
+                "/static/images/耳机.png",//音乐
                 "25",
                 "none",
                 "ycRight bjRight shit"

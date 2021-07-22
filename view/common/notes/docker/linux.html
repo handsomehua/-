@@ -1,0 +1,63 @@
+<h4 class="center" style="color: #CD70D6;background-color:#020202">
+    linux</h4>
+<style>
+    .box {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .box1 {
+        width: 48%;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+    
+    .fdf {
+        color: #FF6A6A
+    }
+</style>
+
+<div class="box">
+    <div class="box1">
+
+        <p><span class="ss">按文件名查找&nbsp;&nbsp;</span><span class="fdf">find /root -name "php"</span></p>
+        <p><span class="ss">创建目录&nbsp;&nbsp;</span><span class="fdf">mkdir names</span></p>
+        <p><span class="ss">创建目录并设置权限&nbsp;&nbsp;</span><span class="fdf">mkdir -m 777 test</span></p>
+        <p><span class="ss">创建文件&nbsp;&nbsp;</span><span class="fdf">touch test.php</span></p>
+        <p><span class="ss">删除文件&nbsp;&nbsp;</span><span class="fdf">rm test.php</span></p>
+        <p><span class="ss">递归删除目录&nbsp;&nbsp;</span><span class="fdf">rm -r test</span></p>
+        <p><span class="ss">强制删除目录&nbsp;&nbsp;</span><span class="fdf">rm -rf test</span></p>
+        <p><span class="ss">移动文件或目录&nbsp;&nbsp;</span><span class="fdf">mv /root/test1 /root/test</span></p>
+        <p><span class="ss">查看外网ip&nbsp;&nbsp;</span><span class="fdf">curl icanhazip.com</span></p>
+
+    </div>
+    <div class="box1">
+        <p><span class="fdf">修改名称&nbsp;&nbsp;</span><span class="ss">mv test3 test33</span></p>
+        <p><span class="fdf">修改权限 r读 w写 x执行&nbsp;&nbsp;</span><span class="ss">chmod 777 test</span></p>
+        <p><span class="fdf">查找2天内修改的文件&nbsp;&nbsp;</span><span class="ss">find / -mtime -2</span></p>
+        <p><span class="fdf">拷贝文件</span><span class="ss">cp test.php test2.php</span></p>
+        <p><span class="fdf">查看cpu使用情况</span><span class="ss">top</span></p>
+        <p><span class="fdf">查看硬盘使用情况</span><span class="ss">df -h</span></p>
+        <p><span class="fdf">查看内存使用情况</span><span class="ss">free -m</span></p>
+        <p><span class="fdf">查找进程  模糊查找</span><span class="ss">ps -ef|grep php 查找进程带php的</span></p>
+        <p><span class="fdf">查看所有进程</span><span class="ss">ps -ef  或  ps -aux</span></p>
+        <p><span class="fdf">查看CPU信息+</span><span class="ss">lscpu</span></p>
+        <p><span class="fdf">查看contos版本</span><span class="ss">lsb_release -a</span></p>
+
+    </div>
+    <div class="box1">
+        <p><span class="ss">打印当前位置&nbsp;&nbsp;</span><span class="fdf">pwd</span></p>
+        <p><span class="ss">清屏&nbsp;&nbsp;</span><span class="fdf">clear</span></p>
+        <p><span class="ss">显示隐藏文件&nbsp;&nbsp;</span><span class="fdf">ls -a</span></p>
+        <p><span class="ss">安全退出&nbsp;&nbsp;</span><span class="fdf">exit</span></p>
+        <p><span class="ss">关机</span><span class="fdf">init 0 关机后无法使用，必须登入到控制器重启</span></p>
+        <p><span class="ss">重启</span><span class="fdf">init 6重启后，等十几分钟才能登入</span></p>
+        <p><span class="ss">Tab补全</span><span class="fdf">补全</span></p>
+        <p><span class="ss">列出目录详细信息</span><span class="fdf">ls -l 或 ll</span></p>
+        <p><span class="ss">软链接</span><span class="fdf">ln -s</span></p>
+        <p><span class="ss">硬链接</span><span class="fdf">ln</span></p>
+
+    </div>
+</div>
