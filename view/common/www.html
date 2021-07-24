@@ -85,7 +85,7 @@
     }
 
     $(function() {
-            switchover(2)
+            switchover(3)
         })
         // #----------------------------------------奖项编辑--------------------------------------------# 
     function switchover(id) {
@@ -95,8 +95,8 @@
             $("#template" + i).attr('style', 'display:none');
         }
         $("#renewa" + id).attr('style', 'font-size: 25px;background-color: #009688;color: #121212');
-        $("#renewa" + id).prevAll().attr('style', 'font-size: 25px;background-color: #5FB878;color: #121212');
-        $("#renewa" + id).nextAll().attr('style', 'font-size: 25px;background-color: #5FB878;color: #121212');
+        $("#renewa" + id).prevAll().attr('style', 'font-size: 25px;background-color: #DCDCDC;color: #121212');
+        $("#renewa" + id).nextAll().attr('style', 'font-size: 25px;background-color: #DCDCDC;color: #121212');
         $("#template" + id).attr('style', 'display:show');
         $("#default").attr('class', id);
     }

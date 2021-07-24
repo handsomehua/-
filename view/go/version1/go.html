@@ -17,6 +17,7 @@
 		    <span lay-value="2" class="layui-btn layui-btn-sm fdsf" id="renewa1" style="font-size: 25px;background-color: #009688;color: #121212;" onclick="switchover('1')">&nbsp;GO&nbsp;</span>
             <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa2" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('2')">&nbsp;beego&nbsp;</span>
             <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa3" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('3')">&nbsp;Docker&nbsp;</span>
+            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa4" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('4')">&nbsp;SQL&nbsp;</span>
             </span>
             <img class='img' onclick='wb("ww")' src="/static/images/文本.png" width="25px" height="25px">
             <span class="">
@@ -33,6 +34,9 @@
     <div id="template3" style="display: none">
         <iframe src="version?id=1&vscode=3" width="100%" height="1000px" frameborder="no" border="0"></iframe>
     </div>
+    <div id="template4" style="display: none">
+        <iframe src="version?id=1&vscode=4" width="100%" height="1000px" frameborder="no" border="0"></iframe>
+    </div>
     </div>
     </script>
     <script>
@@ -47,7 +51,7 @@
                     shadeClose: true,
                     area: ['100%', '70%'],
                     skin: 'yourclass',
-                    content: '<iframe src="' + path + '" width="100%"  height="1650px" frameborder="no" border="0"></iframe>'
+                    content: '<iframe src="' + path + '" width="100%"  height="100%" frameborder="no" border="0"></iframe>'
                 });
             })
         }
@@ -60,6 +64,8 @@
                 prompt("fast?path=beego")
             } else if (id == 3) {
                 prompt("fast?path=docker")
+            } else if (id == 4) {
+                prompt("fast?path=mysql")
             }
         }
     </script>

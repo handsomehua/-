@@ -1,0 +1,39 @@
+{include file="common/header"/} {include file="common/notes/header"/}
+<style>
+    body {
+        background-color: #020202
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .box {
+        counter-reset: count;
+    }
+    
+    p {
+        background: #181A1F;
+        color: #CD70D6;
+    }
+    
+    p:nth-child(odd) {
+        color: #CD70D6;
+        background: #020202;
+    }
+    
+    .ss {
+        color: #97C279;
+    }
+</style>
+
+<body>
+    <div style="float: right;">
+        <span type='button' onclick='displauy("hot1")'><img style="background-color: #020202" src="/static/images/bt.png" width="33px"></span>
+    </div>
+    <div id='hot1' class="hot" style='display:show;'>
+        {include file="common/notes/bt/bt"/}
+    </div>
+</body>

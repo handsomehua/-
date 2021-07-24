@@ -268,6 +268,13 @@ class WidGets extends BaseController
     {
         $arr = [
             [
+                "fast?path=bt",
+                "/static/images/bt.png",
+                "33",
+                "none",
+                "ycRight bjRight1 shit"
+            ],
+            [
                 "fast?path=my",
                 "/static/images/notes/隐私包装.png",
                 "30",

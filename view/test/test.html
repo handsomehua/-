@@ -1,0 +1,87 @@
+{include file="common/header"/} {include file="common/notes/header"/}
+<style>
+    body {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 100%;
+    }
+    
+    .row div {
+        color: #fff;
+        /* text-align: center; */
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .container-fluid {
+        counter-reset: count;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+    
+    body {
+        background-color: #020202
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .box {
+        counter-reset: count;
+    }
+    
+    p {
+        background: #181A1F;
+        color: #CD70D6;
+    }
+    
+    p:nth-child(odd) {
+        color: #CD70D6;
+        background: #020202;
+    }
+    
+    .ss {
+        color: #97C279;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row justify-content-around">
+        <div class="col-md-1.7">
+            <h3>layui列表</h3>
+            <p><a class="ss" href="https://jingyan.baidu.com/article/d7130635eb1e8713fdf47588.html" target='_blank'>小图标显示任务栏</a></p>
+        </div>
+        <div class="col-md-1.7">
+            <h3>Docker</h3>
+            <p><a class="ss" href="https://www.omicsclass.com/article/1243" target='_blank'>win10家庭版安装Docker</a></p>
+        </div>
+    </div>
+</div>
+<script>
+    function imgTk(id) {
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['auto'],
+            skin: 'layui-layer-nobg',
+            shadeClose: true,
+            content: $('#' + id)
+        });
+    }
+</script>
