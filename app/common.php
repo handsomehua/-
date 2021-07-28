@@ -1,5 +1,6 @@
 <?php
 use app\controller\WidGets;
+use app\controller\View;
 // 应用公共文件
 if (!function_exists('widget')) {
 	function widget($func,$parameter1='')
@@ -13,5 +14,12 @@ if (!function_exists('widgets')) {
 	function widgets($func)
 	{
 	   return WidGets::$func();
+	}
+}
+
+if (!function_exists('view')) {
+	function admin($func,$arr)
+	{
+	   return View::$func($arr);
 	}
 }

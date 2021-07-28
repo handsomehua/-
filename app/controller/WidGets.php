@@ -86,6 +86,12 @@ class WidGets extends BaseController
             "25",
             "none"
         ],
+        [
+            "https://search.bilibili.com/?from_source=web_search", //blibli
+            "/static/images/B.png",
+            "25",
+            "none"
+        ],
         ];
         $str = '';
         foreach ($arr as  $k=>$v) {
@@ -192,6 +198,13 @@ class WidGets extends BaseController
                 "www-txsp"
             ],
             [
+                "https://mail.qq.com/cgi-bin/frame_html?sid=erHCbDFVGwADFUIj&r=0874d81326b52bf9b1f06e6b1a43cdbb", //qq邮箱
+                "/static/images/QQ邮箱.png",
+                "26",
+                "none",
+                "www-txsp"
+            ],
+            [
                 "https://www.bilibili.com/video/BV1ME411Y71o?p=172&spm_id_from=pageDriver", //韩
                 "/static/images/韩.png",
                 "26",
@@ -267,6 +280,13 @@ class WidGets extends BaseController
     public static function bjRight()
     {
         $arr = [
+            [
+                "fast?path=aly",
+                "/static/images/阿里云.png",
+                "33",
+                "none",
+                "ycRight bjRight1 shit"
+            ],
             [
                 "fast?path=bt",
                 "/static/images/bt.png",

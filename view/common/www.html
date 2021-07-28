@@ -85,16 +85,24 @@
     }
 
     $(function() {
-            switchover(3)
+            var str = window.location.href;
+            var res = str.match('web.html');
+
+            if (res == 'web.html') {
+                switchover(1)
+            } else {
+                switchover(3)
+            }
+
         })
         // #----------------------------------------奖项编辑--------------------------------------------# 
     function switchover(id) {
         $("#zt-id").val(id)
             // wb(id)
-        for (var i = 1; i <= 5; i++) {
+        for (var i = 1; i <= 6; i++) {
             $("#template" + i).attr('style', 'display:none');
         }
-        $("#renewa" + id).attr('style', 'font-size: 25px;background-color: #009688;color: #121212');
+        $("#renewa" + id).attr('style', 'font-size: 25px;background-color: #8B94AE;color: #00D900  !important;');
         $("#renewa" + id).prevAll().attr('style', 'font-size: 25px;background-color: #DCDCDC;color: #121212');
         $("#renewa" + id).nextAll().attr('style', 'font-size: 25px;background-color: #DCDCDC;color: #121212');
         $("#template" + id).attr('style', 'display:show');

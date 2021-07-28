@@ -1,4 +1,83 @@
+<style>
+    body {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 100%;
+    }
+    
+    .row div {
+        color: #fff;
+        /* text-align: center; */
+    }
+    
+    P::before {
+        counter-increment: count 1;
+        content: counter(count)".";
+        font-size: 26px;
+    }
+    
+    .container-fluid {
+        counter-reset: count;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+</style>
 <h4 class="center" style="color: #CD70D6;background-color:#020202">
+    VSCODE插件</h4>
+<style>
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 50%;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row justify-content-around">
+        <div class="col-md-1.7">
+            <h3>settings配置</h3>
+            <p>vim配置</p>
+            <p>PHP CS Fixer配置</p>
+            <p>超出编辑宽度换行</p>
+        </div>
+        <div class="col-md-1.7">
+            <h3>vscode片段常量</h3>
+        </div>
+
+    </div>
+</div>
+<script>
+    function imgTk(id) {
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            area: ['auto'],
+            skin: 'layui-layer-nobg',
+            shadeClose: true,
+            content: $('#' + id)
+        });
+    }
+</script>
+
+
+
+<!-- <h4 class="center" style="color: #CD70D6;background-color:#020202">
     vscode全局片段代码</h4>
 <style>
     .box {
@@ -24,7 +103,7 @@
         <p>片段常量<span class="ss">.vscode</span></p>
     </div>
     <div class="box1">
-        <p>待办事项<span class="ss">.todo</span> </p>
+        <p>settings配置<span class="ss">.settings</span> </p>
     </div>
 
-</div>
+</div> -->

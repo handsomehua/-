@@ -60,16 +60,21 @@
         color: #97C279;
     }
 </style>
-<div class="container-fluid">
-    <div class="row justify-content-around">
-        <div class="col-md-1.7">
-            <h3>layui列表</h3>
-            <p><a class="ss" href="https://jingyan.baidu.com/article/d7130635eb1e8713fdf47588.html" target='_blank'>小图标显示任务栏</a></p>
-        </div>
-        <div class="col-md-1.7">
-            <h3>Docker</h3>
-            <p><a class="ss" href="https://www.omicsclass.com/article/1243" target='_blank'>win10家庭版安装Docker</a></p>
-        </div>
+
+<div class="box">
+    <div class="box1">
+
+        <p>登入<span class="ss">MySQL5.7.26\bin>mysql  -uroot  -p</span></p>
+        <p>退出<span class="ss">\q;</span></p>
+        <p>查看所有数据库<span class="ss">show databases;</span></p>
+
+    </div>
+    <div class="box1">
+        <p><span class="fdf">修改名称&nbsp;&nbsp;</span><span class="ss">mv test3 test33</span></p>
+
+    </div>
+    <div class="box1">
+        <p><span class="ss">硬链接</span><span class="fdf">ln</span></p>
     </div>
 </div>
 <script>
@@ -85,3 +90,22 @@
         });
     }
 </script>
+
+<script>
+    function fyImg(src) {
+        layer.open({
+            type: 1,
+            title: false,
+            closeBtn: 0,
+            shadeClose: true,
+            content: '<img src=' + src + ' width="110%" height="110%" style="overflow-x: hidden;overflow-y: hidden;"/>'
+        });
+    }
+</script>
+
+
+
+
+
+
+.
