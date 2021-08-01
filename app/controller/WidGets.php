@@ -177,13 +177,6 @@ class WidGets extends BaseController
                 "www-txsp"
             ],
             [
-                "https://study.163.com/course/courseLearn.htm?courseId=1210123803#/learn/video?lessonId=1281883081&courseId=1210123803", //网易云
-                "/static/images/武 (1).png",
-                "26",
-                "none",
-                "www-txsp"
-            ],
-            [
                 "http://www.thinkphp.cn/", //thinkphp
                 "/static/images/favicon.ico",
                 "19",
@@ -205,15 +198,8 @@ class WidGets extends BaseController
                 "www-txsp"
             ],
             [
-                "https://www.bilibili.com/video/BV1ME411Y71o?p=172&spm_id_from=pageDriver", //韩
-                "/static/images/韩.png",
-                "26",
-                "none",
-                "www-txsp"
-            ],
-            [
-                "https://www.bilibili.com/video/BV14T4y1g7h9?p=1", //大
-                "/static/images/大.png",
+                "https://www.bilibili.com/video/BV1gJ411p7xC?p=11&spm_id_from=pageDriver", //gin框架
+                "/static/images/教程.png",
                 "26",
                 "none",
                 "www-txsp"
@@ -325,6 +311,13 @@ class WidGets extends BaseController
             [
                 "fast?path=browser",
                 "/static/images/notes/浏览器.png",
+                "33",
+                "none",
+                "bjRight shit"
+            ],
+            [
+                "fast?path=google",
+                "/static/images/bj_img/browser/谷歌 (1).png",
                 "33",
                 "none",
                 "bjRight shit"

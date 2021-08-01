@@ -8,27 +8,22 @@
         display: flex;
     }
     
-    .box1 {
-        width: 100%;
+    .font {
+        color: #CD70D6;
     }
     
-    .row div {
-        color: #fff;
-        /* text-align: center; */
-    }
-    
-    P::before {
-        counter-increment: count 1;
-        content: counter(count)".";
-        font-size: 26px;
-    }
-    
-    .container-fluid {
-        counter-reset: count;
+    .ss {
+        color: #FF6A6A !important;
     }
     
     p {
-        border-bottom: 1px solid #C078DD;
+        line-height: 18px;
+        font-size: 25px;
+        color: #97C279 !important;
+    }
+    
+    .box1 {
+        width: 100%;
     }
 </style>
 <h4 class="center" style="color: #CD70D6;background-color:#020202">
@@ -41,26 +36,57 @@
     .box1 {
         width: 50%;
     }
-    
-    p {
-        border-bottom: 1px solid #C078DD;
-    }
 </style>
 
 <div class="container-fluid">
     <div class="row justify-content-around">
         <div class="col-md-1.7">
             <h3>settings配置</h3>
-            <p>vim配置</p>
-            <p>PHP CS Fixer配置</p>
-            <p>超出编辑宽度换行</p>
+            <p class="ss">vim配置</p>
+            <p class="ss">PHP CS Fixer配置</p>
+            <p class="ss">超出编辑宽度换行</p>
+            <p class="ss">`键运行go</p>
+            <p class="ss">底部显示或隐藏</p>
         </div>
         <div class="col-md-1.7">
-            <h3>vscode片段常量</h3>
+            <h3>片段常量</h3>
         </div>
+        <div class="col-md-1.7">
+            <h3>程序快捷键</h3>
+            <p class="ss">ctrl + 0 谷歌</p>
+            <p class="ss">ctrl + 1 微信</p>
+            <p class="ss">ctrl + 2 网易云</p>
+            <p class="ss">ctrl + 3 navicat</p>
+            <p class="ss">ctrl + 4 xshell</p>
+            <p class="ss">ctrl + 5 taskkill</p>
+            <p class="ss">ctrl + 6 phpstudy</p>
+            <p class="ss">ctrl + 7 Firefox</p>
+            <p class="ss">ctrl + 8 为知笔记</p>
+            <p class="ss">ctrl + 9 有道云笔记</p>
+            <p class="ss">ctrl + b 百度云</p>
+        </div>
+        <div class="col-md-1.7">
+            <h3>谷歌快捷键</h3>
+            <p>alt + 1 取色器</p>
+            <p>ctrl + shift + s 截图</p>
+            <p>alt + 3 夜间模式设置</p>
 
+        </div>
+        <div class="col-md-1.7">
+            <h3>谷歌Vim</h3>
+            <p class="ss"><span class="font">yg</span>复制打开当前页</p>
+            <p class="ss"><span class="font">j</span> 下拉</p>
+            <p class="ss"><span class="font">k</span> 上拉</p>
+            <p class="ss"><span class="font">H</span>向前<span class="font">L</span>向后</p>
+            <p class="ss"><span class="font">o</span> 搜索历史</p>
+            <p class="ss"><span class="font">gt</span> 切换选择</p>
+            <p class="ss"><span class="font">GT</span> 选择选择</p>
+            <p class="ss"><span class="font">yy</span> 复制url</p>
+            <p class="ss"><span class="font">gg</span> 顶部</p>
+        </div>
     </div>
 </div>
+
 <script>
     function imgTk(id) {
         layer.open({
@@ -100,10 +126,10 @@
 
 <div class="box">
     <div class="box1">
-        <p>片段常量<span class="ss">.vscode</span></p>
+        <p class="ss">片段常量<span class="ss">.vscode</span></p>
     </div>
     <div class="box1">
-        <p>settings配置<span class="ss">.settings</span> </p>
+        <p class="ss">settings配置<span class="ss">.settings</span> </p>
     </div>
 
 </div> -->
