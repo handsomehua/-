@@ -33,17 +33,13 @@
 
 <body>
     <div style="float: right;">
-        <span type='button' onclick='displauy("hot2")'><img style="background-color: #020202" src="/static/images/bj_img/browser/谷歌 (1).png" width="32px"></span>
         <span type='button' onclick='displauy("hot1")'><img style="background-color: #020202" src="/static/images/bj_img/browser/火狐.png" width="33px"></span>
-        <span type='button' onclick='displauy("hot3")'><img style="background-color: #020202" src="/static/images/bj_img/browser/360.png" width="28px"></span>
+        <span type='button' onclick='displauy("hot2")'><img style="background-color: #020202" src="/static/images/bj_img/browser/360.png" width="28px"></span>
     </div>
     <div id='hot1' class="hot" style='display:show;'>
-        {include file="common/notes/browser/google"/}
-    </div>
-    <div id='hot2' class="hot" style='display:none;'>
         {include file="common/notes/browser/firefox"/}
     </div>
-    <div id='hot3' class="hot" style='display:none;'>
+    <div id='hot2' class="hot" style='display:none;'>
         {include file="common/notes/browser/360"/}
     </div>
 </body>

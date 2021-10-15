@@ -14,4 +14,8 @@ class View extends BaseController
     {
         return str_repeat("&nbsp;", $arr[0]);
     }
+    public static function wrap($arr)
+    {
+        return str_repeat("<br/>", $arr[0]);
+    }
 }

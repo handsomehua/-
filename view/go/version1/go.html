@@ -24,10 +24,14 @@
 
             <img class='img' onclick='wb("ww")' src="/static/images/文本.png" width="25px" height="25px">
             <span class="">
-            <span onclick="prompt('fast?path=public')" style="float: right;background: #DCDCDC;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>public</span>
+            <span onclick="prompt('fast?path=public')" style="float: right;background: #DCDCDC;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>AHK</span>
             </span>
+            <span onclick="prompt('fast?path=all')" style="float: right;background: #DCDCDC;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>ALL</span>
+            <!-- <span onclick='window.open("/index.php/test/test.html")' style="float: right;background: #DCDCDC;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click'>TOOLS</span> -->
 
-            <span onclick='window.open("/index.php/test/test.html")' style="float: right;background: #DCDCDC;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click'>测试</span> {:widgets('wwwLeft')} {include file="common/fast"/}
+
+
+            {:widgets('wwwLeft')} {include file="common/fast"/}
     </div>
     <div id="template1">
         <iframe src="version?id=1&vscode=1" width="100%" height="1000px" frameborder="no" border="0"></iframe>
@@ -48,7 +52,7 @@
     </script>
     <script>
         function prompt(path) {
-            console.log(path);
+
             layui.use(['layer'], function() {
                 var layer = layui.layer;
                 layer.open({
@@ -56,7 +60,7 @@
                     title: false,
                     closeBtn: 0,
                     shadeClose: true,
-                    area: ['100%', '70%'],
+                    area: ['100%', '79%'],
                     skin: 'yourclass',
                     content: '<iframe src="' + path + '" width="100%"  height="100%" frameborder="no" border="0"></iframe>'
                 });
@@ -76,5 +80,88 @@
             } else if (id == 5) {
                 prompt("fast?path=gin")
             }
+        }
+    </script>
+    <!-- <script>
+        //键盘对应值 https://www.cnblogs.com/wujilong/archive/2012/09/24/2699847.html
+        document.onkeydown = function(e) {
+            var keyCode = e.keyCode || e.which || e.charCode;
+            var shiftKey = e.shiftKey;
+            var altKey = e.altKey;
+
+            //组合键
+            if (altKey) {
+                switch (keyCode) {
+                    case 112: //1
+                        window.open("http://www.baidu.com");
+                        break;
+                    default:
+                }
+            }
+            e.preventDefault();
+            return false;
+        }
+    </script> -->
+
+    <script>
+        //组合键
+        //shift + 1
+        document.onkeydown = function(e) {
+            var keyCode = e.keyCode || e.which || e.charCode;
+            var shiftKey = e.shiftKey;
+            var altKey = e.altKey;
+            console.log(keyCode)
+
+
+            if (altKey) {
+                switch (keyCode) {
+                    case 49: //1
+                        // window.open("http://www.baidu.com");
+                        prompt('fast?path=all')
+                        break;
+                    case 50: //2
+                        prompt('fast?path=public&status=0')
+                            // prompt('fast?path=password')
+                            // window.open("https://search.bilibili.com/?from_source=web_search");
+                        break;
+                    case 51: //3
+                        prompt('fast?path=password')
+                        break;
+                        // case 54: //6
+                        //     window.open("https://github.com/");
+                        //     break;
+                        // case 55: //7
+                        //     window.open("https://www.aliyun.com/");
+                        //     break;
+                        // case 57: //9
+                        //     window.open("https://mail.qq.com/");
+                        break;
+                        // case 112: //F1
+                        //     window.open("https://studygolang.com/");
+                        //     break;
+                    case 121: //F10
+                        window.open("https://uland.taobao.com/sem/tbsearch?refpid=mm_26632258_3504122_32538762&keyword=%E6%A0%91%E8%8B%97&clk1=c37cb74a270816c5d6b6304e1540eea2&upsId=c37cb74a270816c5d6b6304e1540eea2");
+                        break;
+                    case 122: //F11
+                        window.open("https://v.qq.com/x/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&queryFrom=109");
+                        break;
+                    case 123: //F12
+                        window.open("https://v.qq.com/x/search/?q=%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9+%E7%AC%AC4%E5%AD%A3&stag=101&smartbox_ab=");
+                        break;
+                    default:
+                }
+            } else {
+                switch (keyCode) {
+                    case 27:
+                        layer.closeAll(); //关闭全部弹框
+                        break;
+                    default:
+                }
+            }
+
+
+
+            e.preventDefault();
+            return false;
         }
     </script>

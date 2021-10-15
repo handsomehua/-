@@ -1,27 +1,30 @@
 {include file="common/header"/}
 <style>
-
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
 </style>
 
 <body style="background: #121212;">
-    <!-- <h1 style="text-align:center;">自定义代码块</h1> -->
-    <!--默认显示奖项数量  -->
-
     <?php $length=3; ?>
     <div id="default" class="1"></div>
 
     {include file="common/www"/}
     <div class="layui-form-item center ">
-        <dspan id="revamp " class="<?php echo isset($length) ? $length: '3';?> display">
+        <span id="revamp " class="<?php echo isset($length) ? $length: '3';?> display">
             <span>
 		    <span lay-value="2" class="layui-btn layui-btn-sm fdsf" id="renewa1" style="font-size: 25px;color: #121212;" onclick="switchover('1')">WEB</span>
-            <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa2" style="font-size: 25px;color: #121212;" onclick="switchover('2')">WEB1</span>
-            <!-- <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa3" style="font-size: 25px;background-color: #5FB878;color: #121212;" onclick="switchover('3')">&nbsp;linux&nbsp;</span> -->
-            </span>
-            <span class="">
-                <span onclick="prompt('examination?name=go&id=1')" style="float: right;background: #1E9FFF;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' >试题</span>{:widgets('wwwLeft')}
-            <span onclick="prompt('error?name=go&id=1')" style="float: right;background: #009688;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>error</span>
-            </span>{include file="common/fast"/}
+        <span lay-value="2" class="layui-btn layui-btn-sm " id="renewa2" style="font-size: 25px;color: #121212;" onclick="switchover('2')">WEB1</span>
+        </span>
+
+        <span class="">
+              <span onclick="prompt('fast?path=public&status=1')" style="float: right;background: #DCDCDC;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>AHK</span>
+        </span>
+        <span onclick="prompt('fast?path=all&status=1')" style="float: right;background: #DCDCDC;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>ALL</span>
+        <!-- <span onclick="prompt('examination?name=go&id=1')" style="float: right;background: #1E9FFF;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' >试题</span>{:widgets('wwwLeft')}
+        <span onclick="prompt('error?name=go&id=1')" style="float: right;background: #009688;color: #121212;font-size: 25px;" type='button' class='layui-btn layui-btn-sm on-click' id='btn-prompt'>error</span> -->
+        </span>{include file="common/fast"/}
     </div>
     <!-- <span style="color:#C078DD;font-size: 16px;float: right;">^(不推荐)+(重点)</span> -->
     <div id="template1">
@@ -37,7 +40,6 @@
 </body>
 <script>
     function prompt(path) {
-        console.log(path);
         layui.use(['layer'], function() {
             var layer = layui.layer;
             layer.open({
@@ -45,7 +47,7 @@
                 title: false,
                 closeBtn: 0,
                 shadeClose: true,
-                area: ['100%', '70%'],
+                area: ['100%', '79%'],
                 skin: 'yourclass',
                 content: '<iframe src="' + path + '" width="100%"  height="1650px" frameborder="no" border="0"></iframe>'
             });

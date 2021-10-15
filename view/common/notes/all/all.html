@@ -1,0 +1,214 @@
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .font {
+        color: #CD70D6;
+    }
+    
+    .ss {
+        color: #FF6A6A !important;
+    }
+    
+    p {
+        line-height: 17.5px;
+        color: #97C279 !important;
+    }
+    
+    .box1 {
+        width: 100%;
+    }
+</style>
+<h3 class="center" style="color: #CD70D6;background-color:#020202">{:admin('nbsp',[10])}
+</h3>
+
+<style>
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 50%;
+    }
+    
+    .fff {
+        display: flex;
+    }
+</style>
+<style>
+    .parent {
+        display: grid;
+        grid-template-columns: 1.6fr repeat(10, 0.3fr) 1.6fr;
+        grid-template-rows: 1.5fr repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    
+    .div1 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    
+    .div2 {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    
+    .div3 {
+        grid-area: 2 / 4 / 3 / 5;
+    }
+    
+    .div4 {
+        grid-area: 2 / 5 / 3 / 6;
+    }
+    
+    .div5 {
+        grid-area: 2 / 6 / 3 / 7;
+    }
+    
+    .div6 {
+        grid-area: 2 / 7 / 3 / 8;
+    }
+    
+    .div7 {
+        grid-area: 2 / 8 / 3 / 9;
+    }
+    
+    .div8 {
+        grid-area: 2 / 9 / 3 / 10;
+    }
+    
+    .div9 {
+        grid-area: 2 / 10 / 3 / 11;
+    }
+    
+    .div10 {
+        grid-area: 2 / 11 / 3 / 12;
+    }
+    
+    .div11 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    
+    .div12 {
+        grid-area: 3 / 3 / 4 / 4;
+    }
+    
+    .div13 {
+        grid-area: 3 / 4 / 4 / 5;
+    }
+    
+    .div14 {
+        grid-area: 3 / 5 / 4 / 6;
+    }
+    
+    .div15 {
+        grid-area: 3 / 6 / 4 / 7;
+    }
+    
+    .div16 {
+        grid-area: 3 / 7 / 4 / 8;
+    }
+    
+    .div17 {
+        grid-area: 3 / 8 / 4 / 9;
+    }
+    
+    .div18 {
+        grid-area: 3 / 9 / 4 / 10;
+    }
+    
+    .div19 {
+        grid-area: 3 / 10 / 4 / 11;
+    }
+    
+    .div20 {
+        grid-area: 3 / 11 / 4 / 12;
+    }
+    
+    div {
+        text-align: center;
+    }
+    
+    .kjj {
+        font-size: 38px;
+        color: #FF6A6A;
+    }
+</style>
+<div class="parent">
+    <div class="div1" onclick='allsqq("0")'>
+        <img style="background-color: #020202" src="\static\images\notes\t.png" width="58px">
+    </div>
+    <div class="div2" onclick='allsqq("1")'>
+        <img style="background-color: #020202" src="/static/images/故障.png" width="60px">
+    </div>
+    <div class="div3" onclick='allsqq("2")'>
+        <img style="background-color: #020202" src="/static/images/URL.png" width="55px">
+    </div>
+    <div class="div4" onclick='allsqq("3")'>
+        <img style="background-color: #020202" src="/static/images/notes/ico-git.png" width="55px">
+    </div>
+    <div class="div5" onclick='allsqq("4")'>
+        <span>
+            <img style="background-color: #020202" src="/static/images/耳机.png" width="55px">
+        </span>
+    </div>
+    <div class="div6" onclick='allsqq("5")'>
+        <span>
+            <img style="background-color: #020202" src="/static/images/闪电.png" width="55px">
+        </span>
+    </div>
+    <div class="div7" onclick='allsqq("6")'>
+        <span>
+            <img style="background-color: #020202" src="/static/images/notes/隐私包装.png" width="55px">
+        </span>
+    </div>
+    <div class="div8" onclick='allsqq("7")'>
+        <span>
+            <img style="background-color: #020202" src="\static\images\notes\教师研修.png" width="58px">
+        </span>
+    </div>
+    <div class="div9" onclick='allsqq("8")'>
+        <span>
+            <img style="background-color: #020202;" src="/static/images/账号 (3).png" width="55px" >
+       </span>
+    </div>
+    <div class="div10" onclick='allsqq("9")'>
+        <span>
+            <img style="background-color: #020202" src="\static\images\notes\vscode.png" width="58px">
+        </span>
+    </div>
+</div>
+<script>
+    var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+
+    function allsqq(status) {
+
+        if (status == 0) {
+            parent.prompt('fast?path=test')
+        } else if (status == 1) {
+            parent.prompt('fast?path=fault')
+        } else if (status == 2) {
+            parent.prompt('fast?path=url')
+        } else if (status == 3) {
+            parent.prompt('fast?path=git')
+        } else if (status == 4) {
+            parent.prompt('fast?path=music')
+        } else if (status == 5) {
+            parent.prompt('fast?path=hot_key')
+        } else if (status == 6) {
+            parent.prompt('fast?path=my')
+        } else if (status == 7) {
+            parent.prompt('fast_focus?path=teacher')
+        } else if (status == 8) {
+            parent.prompt('fast?path=password')
+        } else if (status == 9) {
+            parent.prompt('fast_focus?path=vscode')
+        }
+
+    }
+</script>

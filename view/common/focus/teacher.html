@@ -1,0 +1,30 @@
+{include file="common/header"/} {include file="common/notes/header"/}
+<style>
+    body {
+        background-color: #020202
+    }
+    
+    p {
+        background: #181A1F;
+        color: #CD70D6;
+    }
+    
+    p:nth-child(odd) {
+        color: #CD70D6;
+        background: #020202;
+    }
+    
+    .ss {
+        color: #97C279;
+    }
+</style>
+
+<body>
+    <div style="float: right;">
+        <span type='button' onclick='displauy("hot3")'><img  style="background-color: #020202" src="\static\images\notes\教师研修.png" width="40px" height="40px"></span>
+
+    </div>
+    <div id='hot1' class="hot" style='display:show;'>
+        {include file="common/focus/teacher/teacher"/}
+    </div>
+</body>

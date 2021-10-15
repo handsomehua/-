@@ -1,0 +1,20 @@
+<script>
+    //键盘对应值 https://www.cnblogs.com/wujilong/archive/2012/09/24/2699847.html
+    document.onkeydown = function(e) {
+        var keyCode = e.keyCode || e.which || e.charCode;
+        var shiftKey = e.shiftKey;
+        var altKey = e.altKey;
+
+        //组合键
+        if (altKey) {
+            switch (keyCode) {
+                case 112: //1
+                    window.open("http://www.baidu.com");
+                    break;
+                default:
+            }
+        }
+        e.preventDefault();
+        return false;
+    }
+</script>

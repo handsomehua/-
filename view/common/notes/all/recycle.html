@@ -1,0 +1,200 @@
+<style>
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .font {
+        color: #CD70D6;
+    }
+    
+    .ss {
+        color: #FF6A6A !important;
+    }
+    
+    p {
+        line-height: 17.5px;
+        color: #97C279 !important;
+    }
+    
+    .box1 {
+        width: 100%;
+    }
+</style>
+<h3 class="center" style="color: #CD70D6;background-color:#020202">{:admin('nbsp',[10])}
+</h3>
+
+<style>
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 50%;
+    }
+    
+    .fff {
+        display: flex;
+    }
+</style>
+<style>
+    .parent {
+        display: grid;
+        grid-template-columns: 1.6fr repeat(10, 0.3fr) 1.6fr;
+        grid-template-rows: 1.5fr repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    
+    .div1 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    
+    .div2 {
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    
+    .div3 {
+        grid-area: 2 / 4 / 3 / 5;
+    }
+    
+    .div4 {
+        grid-area: 2 / 5 / 3 / 6;
+    }
+    
+    .div5 {
+        grid-area: 2 / 6 / 3 / 7;
+    }
+    
+    .div6 {
+        grid-area: 2 / 7 / 3 / 8;
+    }
+    
+    .div7 {
+        grid-area: 2 / 8 / 3 / 9;
+    }
+    
+    .div8 {
+        grid-area: 2 / 9 / 3 / 10;
+    }
+    
+    .div9 {
+        grid-area: 2 / 10 / 3 / 11;
+    }
+    
+    .div10 {
+        grid-area: 2 / 11 / 3 / 12;
+    }
+    
+    .div11 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    
+    .div12 {
+        grid-area: 3 / 3 / 4 / 4;
+    }
+    
+    .div13 {
+        grid-area: 3 / 4 / 4 / 5;
+    }
+    
+    .div14 {
+        grid-area: 3 / 5 / 4 / 6;
+    }
+    
+    .div15 {
+        grid-area: 3 / 6 / 4 / 7;
+    }
+    
+    .div16 {
+        grid-area: 3 / 7 / 4 / 8;
+    }
+    
+    .div17 {
+        grid-area: 3 / 8 / 4 / 9;
+    }
+    
+    .div18 {
+        grid-area: 3 / 9 / 4 / 10;
+    }
+    
+    .div19 {
+        grid-area: 3 / 10 / 4 / 11;
+    }
+    
+    .div20 {
+        grid-area: 3 / 11 / 4 / 12;
+    }
+    
+    div {
+        text-align: center;
+    }
+    
+    .kjj {
+        font-size: 38px;
+        color: #FF6A6A;
+    }
+</style>
+<div class="parent">
+    <div class="div1" onclick='alls("20")'>
+        <img style="background-color: #020202" src="/static/images/工具.png" width="60px">
+    </div>
+    <div class="div2" onclick='alls("21")'>
+        <img style="background-color: #020202" src="/static/images/notes/浏览器.png" width="60px">
+    </div>
+    <div class="div3" onclick='alls("22")'>
+        <img style="background-color: #020202" src="/static/images/notes/win10.png" width="60px">
+    </div>
+    <div class="div4" onclick='alls("23")'>
+        <img style="background-color: #020202" src="/static/images/nodejs.png" width="60px">
+    </div>
+    <div class="div5" onclick='alls("24")'>
+        <img style="background-color: #020202" src="/static/images/wwwgo.png" width="70px">
+    </div>
+    <div class="div6" onclick='alls("25")'>
+        <img style="background-color: #020202" src="/static/images/notes/搜索 (2).png" width="60px">
+    </div>
+    <div class="div7" onclick='alls("26")'>
+        <img style="background-color: #020202" src="/static/images/bt.png" width="65px">
+    </div>
+    <div class="div8" onclick='alls("27")'>
+        <img style="background-color: #020202" src="/static/images/阿里云.png" width="55px">
+    </div>
+    <div class="div9" onclick='alls("28")'>
+        <img style="background-color: #020202" src="/static/images/bj/插件.png" width="60px">
+    </div>
+    <div class="div10" onclick='alls("29")'>
+        <img style="background-color: #020202" src="/static/images/bj_img/browser/谷歌 (1).png" width="60px">
+    </div>
+    <script>
+        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+
+        function alls(status) {
+
+            if (status == 20) {
+                parent.prompt('fast?path=tools')
+            } else if (status == 21) {
+                parent.prompt('fast?path=browser')
+            } else if (status == 22) {
+                parent.prompt('fast?path=win10')
+            } else if (status == 23) {
+                parent.prompt('fast?path=node')
+            } else if (status == 24) {
+                parent.prompt('fast?path=golang')
+            } else if (status == 25) {
+                parent.prompt('fast?path=www')
+            } else if (status == 26) {
+                parent.prompt('fast?path=bt')
+            } else if (status == 27) {
+                parent.prompt('fast?path=aly')
+            } else if (status == 28) {
+                parent.prompt('fast?path=plug_in')
+            } else if (status == 29) {
+                parent.prompt('fast?path=google')
+            }
+        }
+    </script>

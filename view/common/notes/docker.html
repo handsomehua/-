@@ -38,16 +38,16 @@
         <span type='button' onclick='displauy("hot3")'><img style="background-color: #020202" src="/static/images/linuxs.png" width="30px"></span>
         <span type='button' onclick='displauy("hot4")'><img style="background-color: #020202" src="/static/images/notes/err (1).png" width="33px"></span>
     </div>
-    <div id='hot1' class="hot" style='display:show;'>
+    <div id='hot1' class="hot" style='display:<?php if($status == 0){echo "show";}else{echo "none";} ?>'>
         {include file="common/notes/docker/docker1"/}
     </div>
-    <div id='hot2' class="hot" style='display:none;'>
+    <div id='hot2' class="hot" style='display:<?php if($status == 1){echo "show";}else{echo "none";} ?>'>
         {include file="common/notes/docker/docker"/}
     </div>
-    <div id='hot3' class="hot" style='display:none;'>
+    <div id='hot3' class="hot" style='display:<?php if($status == 2){echo "show";}else{echo "none";} ?>'>
         {include file="common/notes/docker/linux"/}
     </div>
-    <div id='hot4' class="hot" style='display:none;'>
+    <div id='hot4' class="hot" style='display:<?php if($status == 3){echo "show";}else{echo "none";} ?>'>
         {include file="common/notes/docker/err"/}
     </div>
 </body>

@@ -4,6 +4,11 @@
         background-color: #020202
     }
     
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
     p {
         background: #181A1F;
         color: #CD70D6;
@@ -21,29 +26,33 @@
 
 <body>
     <div style="float: right;">
-        <!-- <span type='button' onclick='displauy("hot1")'><img class='img' style="background-color: #020202" src="/static/images/bj/面-不规则-golang.png" width="33px"></span> -->
-        <!-- <span type='button' onclick='displauy("hot2")'><img class='img' style="background-color: #020202" src="/static/images/bj/php (1).png" width="33px"></span -->
-        <span type='button' onclick='displauy("hot1")'><img class='img' style="background-color: #020202" src="/static/images/bj/vscode.png" width="33px" height="33px"></span>
-
+        <span type='button' onclick='displauy("hot1")'><img  style="background-color: #020202" src="/static/images/vs.png" width="40px"></span>
+        <span type='button' onclick='displauy("hot2")'><img  style="background-color: #020202" src="/static/images/notes/win10.png" width="40px"></span>
+        <span type='button' onclick='displauy("hot3")'><img  style="background-color: #020202" src="/static/images/bj_img/browser/谷歌 (1).png" width="40px" ></span>
+        <span type='button' onclick='displauy("hot4")'><img  style="background-color: #020202" src="/static/images/vscode.png" width="40px"></span>
+        <span type='button' onclick='displauy("hot5")'><img  style="background-color: #020202" src="/static/images/autohotkey.png" width="40px"></span>
+        <span type='button' onclick='displauy("hot6")'><img  style="background-color: #020202" src="/static/images/工具.png" width="34px"></span>
+        <span type='button' onclick='displauy("hot7")'><img  style="background-color: #020202" src="/static/images/文件.png" width="35px"></span>
     </div>
-    <div id='hot1' class="hot" style='display:show;'>
+    <div id='hot1' class="hot" style='display:<?php if($status == 0){echo "show";}else{echo "none";} ?>'>
+        {include file="common/notes/public/vs"/}
+    </div>
+    <div id='hot2' class="hot" style='display:<?php if($status == 1){echo "show";}else{echo "none";} ?>'>
+        {include file="common/notes/public/window"/}
+    </div>
+    <div id='hot3' class="hot" style='display:<?php if($status == 2){echo "show";}else{echo "none";} ?>'>
+        {include file="common/notes/public/google"/}
+    </div>
+    <div id='hot4' class="hot" style='display:<?php if($status == 3){echo "show";}else{echo "none";} ?>'>
         {include file="common/notes/public/vscode"/}
     </div>
-    <!-- <div id='hot2' class="hot" style='display:none;'>
-        {include file="common/notes/plug_in/php"/}
+    <div id='hot5' class="hot" style='display:<?php if($status == 4){echo "show";}else{echo "none";} ?>'>
+        {include file="common/notes/public/autohotkey"/}
     </div>
-    <div id='hot3' class="hot" style='display: none;'>
-        {include file="common/notes/plug_in/vscode"/}
-    </div> -->
-    <script>
-        function fyImg(src) {
-            layer.open({
-                type: 1,
-                title: false,
-                closeBtn: 0,
-                shadeClose: true,
-                content: '<img src=' + src + ' width="110%" height="110%" style="overflow-x: hidden;overflow-y: hidden;"/>'
-            });
-        }
-    </script>
+    <div id='hot6' class="hot" style='display:<?php if($status == 4){echo "show";}else{echo "none";} ?>'>
+        {include file="common/notes/public/tools"/}
+    </div>
+    <div id='hot7' class="hot" style='display:<?php if($status == 4){echo "show";}else{echo "none";} ?>'>
+        {include file="common/notes/public/path"/}
+    </div>
 </body>

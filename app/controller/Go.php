@@ -8,7 +8,6 @@ class Go extends BaseController
 {  //go1
     public function go()
     {
-
         return View::fetch("/go/version".input("get.id")."/go");
     }
     public function version()
@@ -29,6 +28,11 @@ class Go extends BaseController
     }
     public function fast()
     {
+        View::assign("status", input('get.status', 0));
         return View::fetch("/common/notes/".input('get.path'));
+    }
+    public function fast_focus()
+    {
+        return View::fetch("/common/focus/".input('get.path'));
     }
 }

@@ -23,12 +23,14 @@
         margin-top: 7px;
     }
 </style>
-<input type="hidden" id="zt-id" name="zt" value="3">
-<span style="float: right;display:none;" class="right www" onclick='window.open("http://localhost:88/index.php/admin/index/index.html")'><img src="/static/images/flw.png" width="30px"></span>
-<span style="float: right;display:none;" class="right go" onclick='window.open("/index.php/go/go.html?id=1")'><img src="/static/images/wwwgo.png" width="35px"></span>
-<span style="float: right;display:none;" class="right top" onclick='window.open("/index.php/web/web.html?id=1")'><span  style="color: #000000;font-size:16px;border-radius:50%;background-color:#C078DD;padding: 3px;">web</span>&nbsp;</span>
+<input id="btn2" type="button" onclick="test();" />
 
-<span style="float: right;display:none;" class="right top" onclick='window.open("/index.php/php/php.html?id=1")'><span  style="color: #000000;font-size:16px;border-radius:50%;background-color:#C078DD;padding: 3px;">php</span>&nbsp;&nbsp;</span>
+<input type="hidden" id="zt-id" name="zt" value="3">
+<!-- <span style="float: right;display:none;" class="right www" onclick='window.open("http://localhost:88/index.php/admin/index/index.html")'><img src="/static/images/flw.png" width="24px"></span> -->
+<span style="float: right;display:none;" class="right go" onclick='window.open("/index.php/go/go.html?id=1")'><img src="/static/images/wwwgo.png" width="35px"></span>
+<span style="float: right;display:none;" class="right top" onclick='window.open("/index.php/web/web.html?id=1")'><span  style="color: #000000;font-size:16px;border-radius:50%;background-color:#C078DD;padding:3px 3px 3px 0px;">web</span>&nbsp;</span>
+
+<span style="float: right;display:none;" class="right top" onclick='window.open("http://localhost:88/index.php/admin/index/index.html")'><span  style="color: #000000;font-size:16px;border-radius:50%;background-color:#C078DD;padding: 3px 3px 3px 0px;">php</span>&nbsp;&nbsp;</span>
 
 
 
@@ -37,9 +39,10 @@
 
 
 
-<span style="float: right;" class='right' id="gd2" onclick="wwwRight()"><img src="/static/images/gd.png"  width="35px">&nbsp;</span>{:widgets('www')}
+<!-- <span style="float: right;" class='right' id="gd2" onclick="wwwRight()"><img src="/static/images/gd.png"  width="35px">&nbsp;</span>{:widgets('www')} -->
 
-<span class='gd' id="gd" onclick="wwwLeft()"><img src="/static/images/gd.png"  width="35px">{php} echo str_repeat("&nbsp;", 10); {/php}</span>
+<!-- <span class='gd' id="gd" onclick="wwwLeft()"><img src="/static/images/gd.png"  width="35px">{php} echo str_repeat("&nbsp;", 10); {/php}</span> -->
+
 <script>
     $(document).ready(function() {
         $('.gd').hover(function() {
@@ -105,10 +108,117 @@
         for (var i = 1; i <= 6; i++) {
             $("#template" + i).attr('style', 'display:none');
         }
-        $("#renewa" + id).attr('style', 'font-size: 25px;background-color: #8B94AE;color: #00D900  !important;');
+        $("#renewa" + id).attr('style', 'font-size: 25px;background-color: #DCDCDC;color: #adeee7   !important;');
         $("#renewa" + id).prevAll().attr('style', 'font-size: 25px;background-color: #DCDCDC;color: #121212');
         $("#renewa" + id).nextAll().attr('style', 'font-size: 25px;background-color: #DCDCDC;color: #121212');
         $("#template" + id).attr('style', 'display:show');
         $("#default").attr('class', id);
     }
+
+    //组合键
+    //shift + 1
+    document.onkeydown = function(e) {
+        var keyCode = e.keyCode || e.which || e.charCode;
+        var shiftKey = e.shiftKey;
+        var altKey = e.altKey;
+        console.log(keyCode)
+
+
+        if (shiftKey) {
+            switch (keyCode) {
+                case 49: //1
+                    // window.open("http://www.baidu.com");
+                    prompt('fast?path=all')
+                    break;
+                case 50: //2
+                    prompt('fast?path=public&status=0')
+                        // prompt('fast?path=password')
+                        // window.open("https://search.bilibili.com/?from_source=web_search");
+                    break;
+                case 51: //3
+                    prompt('fast?path=password')
+                    break;
+                    // case 54: //6
+                    //     window.open("https://github.com/");
+                    //     break;
+                    // case 55: //7
+                    //     window.open("https://www.aliyun.com/");
+                    //     break;
+                    // case 57: //9
+                    //     window.open("https://mail.qq.com/");
+                    break;
+                    // case 112: //F1
+                    //     window.open("https://studygolang.com/");
+                    //     break;
+                case 121: //F10
+                    window.open("https://uland.taobao.com/sem/tbsearch?refpid=mm_26632258_3504122_32538762&keyword=%E6%A0%91%E8%8B%97&clk1=c37cb74a270816c5d6b6304e1540eea2&upsId=c37cb74a270816c5d6b6304e1540eea2");
+                    break;
+                case 122: //F11
+                    window.open("https://v.qq.com/x/search/?q=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&queryFrom=109");
+                    break;
+                case 123: //F12
+                    window.open("https://v.qq.com/x/search/?q=%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9+%E7%AC%AC4%E5%AD%A3&stag=101&smartbox_ab=");
+                    break;
+                default:
+            }
+
+
+
+
+        } else if (altKey) {
+            switch (keyCode) {
+                case 96: //0 
+                    prompt('fast?path=public&status=0')
+                    break;
+                case 97: //1
+                    prompt('fast?path=password')
+                    break;
+                case 98: //2
+                    prompt('fast?path=url')
+                    break;
+                case 99: //3
+                    prompt('fast?path=docker&status=2')
+                    break;
+                case 100: //4
+                    window.open("/index.php/test/test.html")
+                    break;
+
+                default:
+            }
+        } else {
+            switch (keyCode) {
+                case 27:
+                    layer.closeAll(); //关闭全部弹框
+                    break;
+                default:
+            }
+        }
+
+
+
+        e.preventDefault();
+        return false;
+    }
+
+
+
+    // document.onkeydown = function(e) {
+    //     var keyCode = e.keyCode || e.which || e.charCode;
+    //     var shiftKey = e.shiftKey;
+    //     if (shiftKey) {
+    //         switch (keyCode) {
+    //             case 48:
+    //                 window.open("http://www.baidu.com");
+    //                 break;
+    //             case 49:
+    //                 window.open("http://www.baidu.com");
+    //                 break;
+    //             default:
+
+    //         }
+
+    //     }
+    //     e.preventDefault();
+    //     return false;
+    // }
 </script>

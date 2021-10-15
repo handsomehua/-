@@ -1,0 +1,33 @@
+<h4 class="center" style="color: #CD70D6;background-color:#020202">
+    酷狗</h4>
+<style>
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 50%;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+    }
+</style>
+
+<div class="box">
+    <div class="box1">
+        <p><span class="ss">gin框架orm文档https://gorm.io/</span></p>
+        <p><span class="ss">自动建表MemberNumber字段名会拆分成member_number</span></p>
+        <p><span class="ss">结构体中表结构不推荐修改，有bug，给name加默认值却是null</span></p>
+        <p><span class="ss">u := User{Name: "", Age: 18} db.Create(&u)实际执行INSERT INTO `users` (`age`) VALUES (18)</span></p>
+        <p><span class="ss">插入空字符串Name *string `gorm:"default:'小王子'"` u := User{Name: new(string), Age: 18}</span></p>
+        <p><span class="ss">save更新默认会修改所有字段</span></p>
+        <p><span class="ss">save记录存在则更新，不存在则新增</span></p>
+        <p><span class="ss">update更新单个，updates更新多个</span></p>
+        <p><span class="ss">updates Select指点更新哪个，Omit排除哪个</span></p>
+        <p><span class="ss">UpdateColumn,UpdateColumns不触发updated_at钩子</span></p>
+        <p><span class="ss">delete必须有Where或主键，否则会删除全部</span></p>
+    </div>
+    <div class="box1">
+    </div>
+</div>

@@ -16,11 +16,11 @@ class Web extends BaseController
     }
     public function vscode()
     {
-        echo input("get.vscode"),input("get.vid");
         return View::fetch("/web/version".input("get.id")."/vscode".input("get.vscode")."/".input("get.vid"));
     }
     public function fast()
     {
+        View::assign("status", input('get.status', 0));
         return View::fetch("/common/notes/".input('get.path'));
     }
 }

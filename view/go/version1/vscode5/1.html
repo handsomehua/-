@@ -1,26 +1,84 @@
 {include file="common/header"/}
 <link rel="stylesheet" href="/static/go/version1/css/1.css" media="all" />
 <div><span><h1 onclick="titlePath('gos.json.code-snippets')">TGin</h1></span></div>
-<h1 onclick="showNone('display-4')">调试</h1>
+<h1 onclick="showNone('display-5')">调试</h1>
+<div class='display-5'>
+    <p><span><span class='color'>!g_run</span>修改运行端口</span>
+    </p>
+    <p><span><span class='color'>!g_ln</span>输出字符串</span>
+    </p>
+</div>
+<h1 onclick="showNone('display-4')">返回</h1>
+
 <div class='display-4'>
-    <p><span><span class='color'>!gin_test</span>第一个gin程序^</span>
+    <p><span><span class='color'>-g_test</span>第一个gin程序^</span>
     </p>
-    <p><span><span class='color'>!gin_json</span>http返回map空接口json</span>
+    <p><span><span class='color'>-g_json</span>返回map空接口json</span>
     </p>
-    <p><span><span class='color'>!gin_map</span>简写map[string]interface{}{}</span>
-    </p>
-    <p><span><span class='color'>!gin_json</span>http返回结构体json</span>
+    <!-- <p><span><span class='color'>-g_map</span>简写map[string]interface{}{}</span> -->
+    <!-- </p> -->
+    <p><span><span class='color'>-g_json</span>返回结构体json</span>
     </p>
 </div>
 <h1 onclick="showNone('display-1')">路由</h1>
 <div class='display-1'>
-    <p><span><span class='color'>gin~router</span>get请求</span>
+    <p><span><span class='color'>g~router</span>get请求</span>
     </p>
-    <p><span><span class='color'>gin~router</span>post请求</span>
+    <p><span><span class='color'>g~router</span>post请求</span>
     </p>
-    <p><span><span class='color'>gin~router</span>接收get参数</span>
+    <p><span><span class='color'>g~router</span>接收get参数</span>
     </p>
-    <p><span><span class='color'>gin~router</span>接收get参数没传则给默认值</span>
+    <p><span><span class='color'>g~router</span>接收get参数没传则给默认值</span>
+    </p>
+    <p><span><span class='color'>g~router</span>接收post参数</span>
+    </p>
+    <p><span><span class='color'>g~router</span>接收get参数并写入结构体</span>
+    </p>
+    <p><span><span class='color'>g~router</span>接收post参数并写入结构体</span>
+    </p>
+    <p><span><span class='color'>g~router</span>动态路由^</span>
+    </p>
+    <p><span><span class='color'>g~router</span>路由抽离分组</span>
+    </p>
+    <p><span><span class='color'>g~router</span>路由抽离控制器(推荐)+</span>
+    </p>
+    <p><span><span class='color'>g~router</span>路由抽离控制器不支持继承</span>
+    </p>
+    <p><span><span class='color'>g~router</span>获取路由地址</span>
+    </p>
+</div>
+<h1 onclick="showNone('display-7')">控制器</h1>
+<div class='display-7'>
+    <p><span><span class='color'>g~controller</span>继承+</span>
+    </p>
+    <p><span><span class='color'>g~controller</span>中间件</span>
+    </p>
+    <p><span><span class='color'>g~controller</span>全局中间件</span>
+    </p>
+    <p><span><span class='color'>g~controller</span>路由中间件+</span>
+    </p>
+    <p><span><span class='color'>g~controller</span>中间件传递数据到控制器</span>
+    </p>
+    <p><span><span class='color'>g~controller</span>中间件中使用goroutine</span>
+    </p>
+    <p><span><span class='color'>g~controller</span>上传多图片^</span>
+    </p>
+    <p><span><span class='color'>g~controller</span>上传图片+</span>
+    </p>
+</div>
+<h1 onclick="showNone('display-6')">函数</h1>
+<div class='display-6'>
+    <p><span><span class='color'>g*_cookie</span>cookie设置获取+</span>
+    </p>
+    <p><span><span class='color'>g*_cookie</span>删除cookie</span>
+    </p>
+    <p><span><span class='color'>g*_cookie</span>二级域名共享cookie</span>
+    </p>
+    <p><span><span class='color'>g*_session</span>session设置获取+</span>
+    </p>
+    <p><span><span class='color'>g*_session</span>session存入redis中+</span>
+    </p>
+    <p><span><span class='color'>g*_session</span>设置session的过期时间</span>
     </p>
 </div>
 <h1 onclick="showNone('display-2')">块函数</h1>

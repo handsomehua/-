@@ -1,111 +1,93 @@
-{include file="common/header"/} {include file="common/notes/header"/}
 <style>
     body {
-        overflow-x: visible;
-        overflow-y: visible;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
     
     .box {
         display: flex;
     }
     
-    .box1 {
-        width: 100%;
-    }
-    
-    .row div {
-        color: #fff;
-        /* text-align: center; */
-    }
-    
-    P::before {
-        counter-increment: count 1;
-        content: counter(count)".";
-        font-size: 26px;
-    }
-    
-    .container-fluid {
-        counter-reset: count;
-    }
-    
-    p {
-        border-bottom: 1px solid #C078DD;
-    }
-    
-    body {
-        background-color: #020202
-    }
-    
-    P::before {
-        counter-increment: count 1;
-        content: counter(count)".";
-        font-size: 26px;
-    }
-    
-    .box {
-        counter-reset: count;
-    }
-    
-    p {
-        background: #181A1F;
+    .font {
         color: #CD70D6;
-    }
-    
-    p:nth-child(odd) {
-        color: #CD70D6;
-        background: #020202;
     }
     
     .ss {
-        color: #97C279;
+        color: #FF6A6A !important;
+    }
+    
+    p {
+        line-height: 17.5px;
+        color: #97C279 !important;
+    }
+    
+    .box1 {
+        width: 100%;
     }
 </style>
+<h3 class="center" style="color: #CD70D6;background-color:#020202">{:admin('nbsp',[10])}
+</h3>
 
-<div class="box">
-    <div class="box1">
+<style>
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 50%;
+    }
+</style>
+<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="row justify-content-around">
+            <div class="col-md-1.7 www">
+                <br>
+                <br>
+                <br>
+                <br>
 
-        <p>登入<span class="ss">MySQL5.7.26\bin>mysql  -uroot  -p</span></p>
-        <p>退出<span class="ss">\q;</span></p>
-        <p>查看所有数据库<span class="ss">show databases;</span></p>
+                <span>
+                    <a href='fast?path=tools' target='_blank'><img style="background-color: #020202" src="/static/images/工具.png" width="60px"></a>
+                </span>
 
-    </div>
-    <div class="box1">
-        <p><span class="fdf">修改名称&nbsp;&nbsp;</span><span class="ss">mv test3 test33</span></p>
+                <span>
+                    <a href='fast?path=browser' target='_blank'><img style="background-color: #020202" src="/static/images/notes/浏览器.png" width="60px"></a>
+                </span>
 
-    </div>
-    <div class="box1">
-        <p><span class="ss">硬链接</span><span class="fdf">ln</span></p>
+                <span>
+                    <a href='fast?path=win10' target='_blank'><img style="background-color: #020202" src="/static/images/notes/win10.png" width="60px"></a>
+                </span>
+
+                <span>
+                    <a href='fast?path=node' target='_blank'><img style="background-color: #020202" src="/static/images/nodejs.png" width="60px"></a>
+                </span>
+
+                <span>
+                <a href='fast?path=golang' target='_blank'><img style="background-color: #020202" src="/static/images/wwwgo.png" width="70px"></a>
+                </span>
+
+
+                <span>
+                    <a href='fast?path=www' target='_blank'><img style="background-color: #020202" src="/static/images/notes/搜索 (2).png" width="60px"></a>
+                </span>
+
+                <span>
+                    <a href='fast?path=bt' target='_blank'><img style="background-color: #020202" src="/static/images/bt.png" width="65px"></a>
+                </span>
+
+                <span>
+                    <a href='fast?path=aly' target='_blank'><img style="background-color: #020202" src="/static/images/阿里云.png" width="55px"></a>
+                </span>
+
+                <span>
+                    <a href='fast?path=plug_in' target='_blank'><img style="background-color: #020202" src="/static/images/bj/插件.png" width="60px"></a>
+                </span>
+
+                <span>
+                    <a href='fast?path=google' target='_blank'><img style="background-color: #020202" src="/static/images/bj_img/browser/谷歌 (1).png" width="60px"></a>
+                </span>
+
+            </div>
+        </div>
     </div>
 </div>
-<script>
-    function imgTk(id) {
-        layer.open({
-            type: 1,
-            title: false,
-            closeBtn: 0,
-            area: ['auto'],
-            skin: 'layui-layer-nobg',
-            shadeClose: true,
-            content: $('#' + id)
-        });
-    }
-</script>
-
-<script>
-    function fyImg(src) {
-        layer.open({
-            type: 1,
-            title: false,
-            closeBtn: 0,
-            shadeClose: true,
-            content: '<img src=' + src + ' width="110%" height="110%" style="overflow-x: hidden;overflow-y: hidden;"/>'
-        });
-    }
-</script>
-
-
-
-
-
-
-.

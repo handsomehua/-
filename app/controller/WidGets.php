@@ -22,12 +22,12 @@ class WidGets extends BaseController
             "35",
             "none"
         ],
-        [
-            "http://www.baidu.com", //百度
-            "/static/images/baidu.png",
-            "26",
-            "none"
-        ],
+        // [
+        //     "http://www.baidu.com", //百度
+        //     "/static/images/baidu.png",
+        //     "26",
+        //     "none"
+        // ],
         [
             "https://hub.docker.com/", //Dart
             "/static/images/docker.png",
@@ -79,19 +79,18 @@ class WidGets extends BaseController
             "none"
         ],
     
-    
-        [
-            "https://translate.google.cn/", //谷歌翻译
-            "/static/images/翻译.png",
-            "25",
-            "none"
-        ],
-        [
-            "https://search.bilibili.com/?from_source=web_search", //blibli
-            "/static/images/B.png",
-            "25",
-            "none"
-        ],
+        // [
+        //     "https://translate.google.cn/", //谷歌翻译
+        //     "/static/images/翻译.png",
+        //     "25",
+        //     "none"
+        // ],
+        // [
+        //     "https://search.bilibili.com/?from_source=web_search", //blibli
+        //     "/static/images/B.png",
+        //     "25",
+        //     "none"
+        // ],
         ];
         $str = '';
         foreach ($arr as  $k=>$v) {
@@ -318,6 +317,27 @@ class WidGets extends BaseController
             [
                 "fast?path=google",
                 "/static/images/bj_img/browser/谷歌 (1).png",
+                "33",
+                "none",
+                "bjRight shit"
+            ],
+            [
+                "fast?path=tools",
+                "/static/images/工具.png",
+                "36",
+                "none",
+                "bjRight shit"
+            ],
+            [
+                "fast?path=win10",
+                "/static/images/notes/win10.png",
+                "33",
+                "none",
+                "bjRight shit"
+            ],
+            [
+                "fast?path=node",
+                "/static/images/nodejs.png",
                 "33",
                 "none",
                 "bjRight shit"

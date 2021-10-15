@@ -1,0 +1,122 @@
+<style>
+    body {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    
+    .box {
+        display: flex;
+    }
+    
+    .box1 {
+        width: 50%;
+    }
+    
+    p {
+        border-bottom: 1px solid #C078DD;
+        font-size: 20px;
+    }
+    
+    #FF6464 .ss {
+        color: #97C279 !important;
+    }
+</style>
+<h2 style="color: #CD70D6;background-color:#020202;text-align:center;">{:admin('nbsp',[2])}
+</h2>
+<div class="box">
+
+    <div class="box1">
+        <p>
+            <b style="font-size: 22px;">版本回滚
+                </b>
+            <span class="ss">
+            {:admin('nbsp',[38])}git reset --hard ID号
+        </span>
+        </p>
+
+        <p>
+            <b style="font-size: 22px;">版本记录
+                </b>
+            <span class="ss">
+            {:admin('nbsp',[38])}git log
+        </span>
+        </p>
+
+        <p>
+            <b style="font-size: 22px;">撤销commit
+                </b>
+            <span class="ss">
+            {:admin('nbsp',[32])}git reset HEAD^
+        </span>
+        </p>
+
+
+
+        <p>
+            <b style="font-size: 22px;">撤销add
+                </b>
+            <span class="ss">
+            {:admin('nbsp',[39])}git reset 文件名   
+        </span>
+        </p>
+
+
+
+        <p>
+            <b style="font-size: 22px;">撤销全部add
+                </b>
+            <span class="ss">
+                {:admin('nbsp',[31])}git reset .       
+        </span>
+        </p>
+
+        <p>
+            <b style="font-size: 22px;">创建分支
+                </b>
+            <span class="ss">
+                {:admin('nbsp',[31])}git branch 分支名
+        </span>
+        </p>
+
+        <p>
+            <b style="font-size: 22px;">删除分支
+                </b>
+            <span class="ss">
+                {:admin('nbsp',[31])}git branch -d 分支名
+        </span>
+        </p>
+
+
+        <p>
+            <b style="font-size: 22px;">回溯上个版本后，又回溯回来
+                </b>
+            <span class="ss">
+               <br/> {:admin('nbsp',[12])}git reflog
+               <br/> {:admin('nbsp',[12])}git reset --hard ID号
+
+        </span>
+        </p>
+        <p>
+            <b style="font-size: 22px;">git上传dev分支
+                </b>
+            <span class="ss">
+            <br/>{:admin('nbsp',[10])}master分支
+            <br/>{:admin('nbsp',[10])} (1) git pull origin master
+            <br/>{:admin('nbsp',[10])} (2) git checkout chen
+            <br/>{:admin('nbsp',[10])} (3) git merge master
+            <br/>{:admin('nbsp',[10])} (4) git add 再 commit
+            <br/>{:admin('nbsp',[10])} (5) git checkout dev
+            <br/>{:admin('nbsp',[10])} (6) git pull origin dev
+            <br/>{:admin('nbsp',[10])} (7) git merge chen
+            <br/>{:admin('nbsp',[10])} (8) git push origin dev 
+            <br/>{:admin('nbsp',[10])} (9) git checkout chen
+            <br/>{:admin('nbsp',[10])} (10) git push origin chen 
+        </span>
+
+        </p>
+    </div>
+
+
+
+</div>
+</div>

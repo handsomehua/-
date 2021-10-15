@@ -17,12 +17,27 @@
 
 <div class="box">
     <div class="box1">
+        <p><span class="ss">gin框架第一步就是开启热加载fresh</span></p>
         <p><span class="ss">结构体首字母小写，模板中无法{{.Age}}</span></p>
         <p><span class="ss">json数据无法返回结构体小写字段，使用需`json:"name"`</span></p>
         <p><span class="ss">模板中if只能使用eq(==) ne(!=) lt(<) le(<=) gt(>) ge(>=)</span></p>
         <p><span class="ss">gin步骤 定义模板->解析模板->渲染模板</span></p>
         <p><span class="ss">text/template和html/template区别，text 不会转义html和js，html会转义html和js</span></p>
         <p><span class="ss">遇事不决，先写注释</span></p>
+        <p><span class="ss">返回数据gin.H{}相当于map[string]interface{}{}</span></p>
+        <p><span class="ss">r.LoadHTMLGlob("templates/**/**/*")多层渲染</span></p>
+        <p><span class="ss">range循环可以加else</span></p>
+        <p><span class="ss">with循环相当于把.new赋值给了.</span></p>
+        <p><span class="ss">加载模板,放在路由上面</span></p>
+        <p><span class="ss">自定义函数要放在加载模板之前</span></p>
+        <p><span class="ss">如果定义的方法想被外部使用，首字母必须大写</span></p>
+        <p><span class="ss">package default关键字会报错</span></p>
+        <p><span class="ss">中间件是在index方法之前执行的方法</span></p>
+        <p><span class="ss">goroutine不能在中间件使用c *gin.Context 需要拷贝</span></p>
+        <p><span class="ss">form上传表单，需要加上enctype="multipart/form-data"</span></p>
+        <p><span class="ss">类型不同无法拼接</span></p>
+        <p><span class="ss">gin框架没有提供Session相关文档，可以使用第三方的Session中间件</span></p>
+        <p><span class="ss">session的默认保存时间是30天</span></p>
     </div>
     <div class="box1">
         <p><span class="ss"></span></p>
